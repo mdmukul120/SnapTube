@@ -1,0 +1,70 @@
+name: Build Meta Tube Android APK & Release
+
+on:
+  push:
+    branches:
+      - 'arena/0cd52cb2-snaptube'
+      - 'main'
+
+permissions:
+  contents: write
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Gradle 8.7
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Generate Release Signing Keystore
+        run: |
+          keytool -genkeypair -v \
+            -keystore /tmp/metatube-release.jks \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -alias metatube \
+            -storepass metatube123 \
+            -keypass metatube123 \
+            -dname "CN=MetaTube, OU=Mobile, O=MetaTube, L=Dhaka, S=BD, C=BD"
+
+      - name: Build Signed MetaTube.apk
+        working-directory: android-app
+        env:
+          SIGNING_STORE_FILE: /tmp/metatube-release.jks
+          SIGNING_STORE_PASSWORD: metatube123
+          SIGNING_KEY_ALIAS: metatube
+          SIGNING_KEY_PASSWORD: metatube123
+        run: |
+          gradle assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk /tmp/MetaTube.apk
+          ls -lh /tmp/MetaTube.apk
+
+      - name: Create Source Code Archive
+        run: |
+          git archive --format=zip --output=/tmp/MetaTube-Source.zip HEAD
+          ls -lh /tmp/MetaTube-Source.zip
+
+      - name: Publish MetaTube.apk & Source Zip to GitHub Releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view MetaTube-v1.0 >/dev/null 2>&1; then
+            gh release upload MetaTube-v1.0 /tmp/MetaTube.apk /tmp/MetaTube-Source.zip --clobber
+          else
+            gh release create MetaTube-v1.0 /tmp/MetaTube.apk /tmp/MetaTube-Source.zip \
+              --target "${{ github.sha }}" \
+              --title "Meta Tube v1.0.0 — Android APK & Source" \
+              --notes "### Meta Tube v1.0.0\n- **Android App (APK):** Direct installable MetaTube.apk with Android Share Sheet & System DownloadManager\n- **Live Web App:** https://meta-tube-jet.vercel.app"
+          fi
