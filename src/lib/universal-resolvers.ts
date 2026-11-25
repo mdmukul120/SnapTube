@@ -650,7 +650,7 @@ async function resolveWikimedia(targetUrl: string, fileTitle: string | null): Pr
 
     const formats: MediaFormat[] = [];
     if (vi.url) {
-      const ext = vi.url.split('.').pop()?.toLowerCase() || 'webm';
+      const ext = vi.url.split('?')[0].split('.').pop()?.toLowerCase() || 'webm';
       const isAudio = vi.mediatype === 'AUDIO' || ['mp3', 'ogg', 'flac', 'wav'].includes(ext);
       formats.push({
         id: 'wiki-orig',
@@ -674,7 +674,7 @@ async function resolveWikimedia(targetUrl: string, fileTitle: string | null): Pr
           ? 'mp4'
           : d.type?.includes('webm')
             ? 'webm'
-            : d.src.split('.').pop()?.toLowerCase() || 'webm';
+            : d.src.split('?')[0].split('.').pop()?.toLowerCase() || 'webm';
         const isAudio = d.type?.startsWith('audio/');
         formats.push({
           id: `wiki-der-${d.shorttitle || d.height || Math.random()}`,
@@ -1532,9 +1532,9 @@ export async function searchUniversalMedia(
                 instantFormats: [
                   {
                     id: `wiki-orig-${p.pageid}`,
-                    label: `Direct HD Video (${vi.url.split('.').pop()?.toUpperCase() || 'WEBM'})`,
+                    label: `Direct HD Video (${vi.url.split('?')[0].split('.').pop()?.toUpperCase() || 'WEBM'})`,
                     quality: vi.height ? `${vi.height}p` : 'HD',
-                    ext: vi.url.split('.').pop()?.toLowerCase() || 'webm',
+                    ext: vi.url.split('?')[0].split('.').pop()?.toLowerCase() || 'webm',
                     type: 'video',
                     url: vi.url,
                     sizeBytes: vi.size,
