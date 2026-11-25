@@ -1,6 +1,7 @@
 name: Build Meta Tube Android APK & Release
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'arena/0cd52cb2-snaptube'
