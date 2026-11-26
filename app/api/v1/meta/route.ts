@@ -1,6 +1,8 @@
 import manifest from "@/data/source-manifest.json";
 import { features, apiAuth } from "@/lib/config";
 
+const mask = (value: string) => (value ? value.slice(0, 4) + "…" : "");
+
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
@@ -14,11 +16,14 @@ export async function GET() {
       step1: {
         method: "POST",
         path: "/api/v1/auth/token",
-        headers: { [apiAuth.keyHeader]: "<public api key>" },
+        headers: { [apiAuth.keyHeader]: mask(apiAuth.bffKey) || "<public api key>" },
         returns: "short-lived HMAC-signed bearer token",
       },
       step2: {
-        headers: { [apiAuth.tokenHeader]: "Bearer <token>", [apiAuth.keyHeader]: "<public api key>" },
+        headers: {
+          [apiAuth.tokenHeader]: "Bearer <token>",
+          [apiAuth.keyHeader]: mask(apiAuth.bffKey) || "<public api key>",
+        },
         note: "both headers are validated on every data request",
       },
       ttlSeconds: apiAuth.tokenTtlSeconds,

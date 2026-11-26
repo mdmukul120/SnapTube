@@ -223,6 +223,16 @@ for m in re.finditer(
 ):
     fest.append(m.group(2) or m.group(1))
 
+# ------------------------------------------------- featured: real view counts
+by_title = {}
+for collection in collections:
+    for entry in collection["items"]:
+        by_title.setdefault(entry["title"].lower(), entry)
+for entry in featured:
+    match = by_title.get(entry["title"].lower())
+    entry["views"] = match["views"] if match else 0
+    entry["language"] = match.get("language", "") if match else ""
+
 # --------------------------------------------------------------------- taxonomy
 genres = [
     (m.group(1), m.group(2))

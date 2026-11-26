@@ -36,7 +36,8 @@ export default function HomePage() {
                   year: entry.year,
                   kind: entry.kind,
                   quality: entry.quality,
-                  views: Math.round((entry.rating ?? 6) * 420),
+                  views: entry.views,
+                  rating: entry.rating,
                   poster: entry.poster,
                 }}
               />

@@ -31,7 +31,9 @@
    "quality": "1080p WebRip",
    "poster": "https://image.tmdb.org/t/p/w500/bMXWXKM9ydUmMTNvDnYo9QtCBRt.jpg",
    "slug": "the-lord-of-the-rings-the-rings-of-power",
-   "kind": "series"
+   "kind": "series",
+   "views": 12032,
+   "language": ""
   },
   {
    "title": "O.M: Operation Mole",
@@ -40,7 +42,9 @@
    "quality": "1080p HDTS",
    "poster": "https://image.tmdb.org/t/p/w500/vFnFLqXjf7RQfkNxrrys43BZKxJ.jpg",
    "slug": "o-m-operation-mole",
-   "kind": "movie"
+   "kind": "movie",
+   "views": 10700,
+   "language": ""
   },
   {
    "title": "Ramayana: Rise of a Legend",
@@ -49,7 +53,9 @@
    "quality": "1080p HDTS",
    "poster": "https://image.tmdb.org/t/p/w500/hz2Hv8tPToHvQ7HaxzqeLvahmcJ.jpg",
    "slug": "ramayana-rise-of-a-legend",
-   "kind": "movie"
+   "kind": "movie",
+   "views": 45875,
+   "language": ""
   },
   {
    "title": "Jailer 2",
@@ -58,7 +64,9 @@
    "quality": "1080p WebRip",
    "poster": "https://image.tmdb.org/t/p/w500/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg",
    "slug": "jailer-2",
-   "kind": "movie"
+   "kind": "movie",
+   "views": 0,
+   "language": ""
   },
   {
    "title": "The Odyssey",
@@ -67,7 +75,9 @@
    "quality": "1080p BluRay",
    "poster": "https://image.tmdb.org/t/p/w500/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
    "slug": "the-odyssey",
-   "kind": "movie"
+   "kind": "movie",
+   "views": 0,
+   "language": ""
   }
  ],
  "collections": [

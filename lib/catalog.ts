@@ -25,6 +25,7 @@ type CatalogFile = {
     poster: string;
     slug: string;
     kind: string;
+    views: number;
   }>;
   collections: Collection[];
   latest: CatalogItem[];
