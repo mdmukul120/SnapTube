@@ -35,6 +35,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const decadeRoutes = taxonomy.decades.map((decade) => ({
+    url: `${base}/decade/${decade}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  const languageRoutes = ["english", "hindi", "south-indian"].map((code) => ({
+    url: `${base}/language/${code}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.5,
+  }));
+
   const titleRoutes = allItems.map((item) => {
     const lane = item.kind === "series" ? "series" : item.kind === "game" ? "games" : item.kind === "anime" ? "anime" : "movies";
     return {
@@ -45,5 +59,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...collectionRoutes, ...genreRoutes, ...titleRoutes];
+  return [...staticRoutes, ...collectionRoutes, ...genreRoutes, ...decadeRoutes, ...languageRoutes, ...titleRoutes];
 }

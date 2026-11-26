@@ -50,6 +50,7 @@ export function SiteFooter() {
                   <a href={`/genre/${genre.slug}`}>{genre.name}</a>
                 </li>
               ))}
+              <li><a href="/language/english">English</a></li>
               <li><a href="/analysis">Site &amp; API analysis</a></li>
             </ul>
           </div>

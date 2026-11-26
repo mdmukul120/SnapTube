@@ -44,6 +44,7 @@ Everything above is reproduced in `/analysis` inside the app, together with the 
 /genre/[slug]           13 generated genre streams
 /top  /top/movies  /top/series
 /latest  /search?q=  /fest/mcu  /analysis
+/decade/[1990s|2000s|2010s|2020s]     language shelves: /language/english · /language/hindi · /language/south-indian
 ```
 
 ## 4. API — auth key + auth token

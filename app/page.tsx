@@ -132,6 +132,20 @@ export default function HomePage() {
               <b>API</b>
               <small>Auth key + token docs</small>
             </a>
+            {taxonomy.decades.map((decade) => (
+              <a className="bento-tile" key={decade} href={`/decade/${decade}`}>
+                <b>{decade}</b>
+                <small>Decade shelf</small>
+              </a>
+            ))}
+            <a className="bento-tile" href="/language/hindi">
+              <b>हिंदी</b>
+              <small>Hindi shelf</small>
+            </a>
+            <a className="bento-tile" href="/language/south-indian">
+              <b>South</b>
+              <small>South Indian shelf</small>
+            </a>
           </div>
         </div>
       </section>
