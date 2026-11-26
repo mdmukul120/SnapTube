@@ -2,8 +2,19 @@ import { featured, spotlight, data, stats } from "@/lib/catalog";
 import { Icon } from "./ui";
 
 /** Hero: editorial split with a stacked poster deck driven by the spotlight rail. */
+/** The archive addresses series as /tv/<slug>; this build serves them under /series. */
+function laneHref(href: string | undefined, kind?: string): string {
+  if (!href) return "/movies";
+  if (href.startsWith("/tv/")) return href.replace("/tv/", "/series/");
+  if (href.startsWith("/movies/") || href.startsWith("/series/") || href.startsWith("/games/") || href.startsWith("/anime/")) {
+    return href;
+  }
+  return kind === "series" ? `/series/${href.replace(/^\//, "")}` : `/movies/${href.replace(/^\//, "")}`;
+}
+
 export function Hero() {
   const lead = spotlight[0];
+  const leadHref = laneHref(lead?.href, lead?.kind);
   const deck = [
     lead,
     ...featured.slice(1, 4).map((entry) => ({
@@ -37,7 +48,7 @@ export function Hero() {
                 "A rebuilt, fully redesigned home for the CTGMovies archive — every collection, franchise and late import from the source site, re-scanned and re-cut."}
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a className="btn btn-primary" href={`${lead?.href ?? "/movies"}#player`}>
+              <a className="btn btn-primary" href={`${leadHref}#player`}>
                 <Icon name="play" size={13} /> Watch now
               </a>
               <a className="btn btn-ghost" href="/movies">
@@ -60,7 +71,7 @@ export function Hero() {
                 key={`${entry.slug}-${index}`}
                 className="hero-poster"
                 data-pos={index > 3 ? 3 : index}
-                href={entry.href}
+                href={laneHref(entry.href, entry.kind)}
                 aria-label={entry.title}
               >
                 {entry.poster ? <img src={entry.poster} alt={entry.title} /> : null}
