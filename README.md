@@ -114,3 +114,23 @@ before the first production deploy.
 
 Catalogue metadata belongs to the original rights holders; this build only re-presents the archived
 public listing for the CTGMovies project.
+
+## 8. Playback
+
+The detail page (`/movies|series|games|anime/[slug]#player`) renders a real player, not a placeholder:
+
+* `VideoPlayer` (`components/player.tsx`) — HLS via native support or `hls.js`, MP4/WebM fallback,
+  scrub bar with buffered range, ±10s skip, volume, mute, quality switcher, fullscreen,
+  keyboard shortcuts (`space`, `←/→`, `m`, `f`) and an inline error state with a one-click source retry.
+* Sources come from `GET /api/v1/play/:kind/:slug` behind the auth-key + auth-token handshake,
+  so no CDN key ever reaches the browser.
+* Resolution order (`lib/streams.ts`):
+
+| Priority | Env var | Shape |
+| --- | --- | --- |
+| 1 | `PLAYBACK_SOURCES` | `{"janata-bar":["https://cdn/x/master.m3u8","https://cdn/x/720.mp4"]}` |
+| 2 | `STREAM_BASE_URL` | `https://cdn.example.com/{kind}/{slug}` → appends `master.m3u8`, `720p.m3u8`, `1080p.m3u8` |
+| 3 | demo reel | public Mux HLS + Google sample MP4s, rotated per title so playback always works |
+
+To stream your own catalogue, set `PLAYBACK_SOURCES` (per title) or `STREAM_BASE_URL` (whole library)
+in the Vercel project — no code change needed.

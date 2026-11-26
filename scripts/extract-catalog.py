@@ -130,13 +130,19 @@ for chunk in latest_cards:
     if not lang:
         lang = re.search(r'>\s*([A-Za-z][A-Za-z ]{2,24})\s*</span>\s*</div>', chunk)
     title_html = re.search(r"<h3[^>]*>(.*?)</h3>", chunk, re.S)
-    full = text(title_html.group(1)) if title_html else ""
+    full = ""
+    if title_html:
+        inner_title = title_html.group(1)
+        # pull the year out of the nested <span> before stripping tags slashes the text
+        year_span = re.search(r"<span[^>]*>\D*?(\d{4})", inner_title)
+        year = year_span.group(1) if year_span else ""
+        full = text(re.sub(r"<span[^>]*>.*?</span>", "", inner_title, flags=re.S))
     # the source nests the year in a span with react comments -> "Title ( 2026 )"
-    full = re.sub(r"\(\s*(\d{4})\s*\)", r"(\1)", full)
-    year = ""
-    ym = re.match(r"(.*?)\((\d{4})\)$", full)
-    if ym:
-        full, year = ym.group(1).strip(), ym.group(2)
+    full = re.sub(r"\(\s*(\d{4})\s*\)", r"(\1)", full).strip()
+    if not year:
+        ym = re.match(r"(.*?)\((\d{4})\)$", full)
+        if ym:
+            full, year = ym.group(1).strip(), ym.group(2)
     kind = re.search(r">(MOVIE|SERIES|GAME|ANIME)</span>", chunk)
     description = re.search(r'line-clamp-\d+[^>]*>([^<]{40,})<', chunk)
     stars = len(re.findall(r'stop offset="100%"', chunk))

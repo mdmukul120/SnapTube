@@ -37,7 +37,7 @@ export function Hero() {
                 "A rebuilt, fully redesigned home for the CTGMovies archive — every collection, franchise and late import from the source site, re-scanned and re-cut."}
             </p>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a className="btn btn-primary" href={lead?.href ?? "/movies"}>
+              <a className="btn btn-primary" href={`${lead?.href ?? "/movies"}#player`}>
                 <Icon name="play" size={13} /> Watch now
               </a>
               <a className="btn btn-ghost" href="/movies">

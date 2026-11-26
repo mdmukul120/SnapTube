@@ -1,4 +1,5 @@
 import { Icon, SectionHead } from "./ui";
+import { VideoPlayer } from "./player";
 import { PosterCard, Rail } from "./cards";
 import type { CatalogItem } from "@/lib/config";
 import { allItems, collections, findItem, stats } from "@/lib/catalog";
@@ -73,15 +74,33 @@ export function DetailView({ item }: { item: CatalogItem }) {
         </div>
       </div>
 
-      <div id="player" className="player">
-        <span className="chip chip-live">
-          <Icon name="shield" size={11} /> Secure stream placeholder
-        </span>
-        <h3>The player is wired, not loaded</h3>
-        <p>
-          Sign in with a {item.kind === "game" ? "Cinemax game" : "Cinemax"} account to unlock the 1080p source. This
-          rebuilt front-end keeps the same access rule as the archive: the play request is issued through the
-          authenticated API, never from the browser.
+      <div id="player" className="watch">
+        <div className="watch-head">
+          <div>
+            <span className="kicker">Now playing</span>
+            <h2 className="watch-title">{item.title}</h2>
+          </div>
+          <div className="watch-flags">
+            <span className="chip chip-live">
+              <Icon name="shield" size={11} /> Signed stream
+            </span>
+            <span className="chip">{item.quality}</span>
+            <span className="chip">{item.year || "—"}</span>
+          </div>
+        </div>
+
+        <VideoPlayer
+          kind={item.kind === "series" ? "series" : item.kind === "game" ? "games" : item.kind}
+          slug={item.slug}
+          title={item.title}
+          poster={item.backdrop || item.poster}
+        />
+
+        <p className="watch-note">
+          Playback URLs are resolved server-side by{" "}
+          <code>/api/v1/play/{item.kind === "series" ? "series" : item.kind === "game" ? "games" : item.kind}/{item.slug}</code>{" "}
+          behind the auth-key + auth-token handshake — the browser never sees a private CDN key. HLS uses native
+          playback where supported and <code>hls.js</code> everywhere else.
         </p>
       </div>
 
