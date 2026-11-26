@@ -1,0 +1,8 @@
+{
+  "name": "MetaTube",
+  "description": "Multi-provider video & MP3 downloader, offline media player, multi-threaded download manager, and playlist organizer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

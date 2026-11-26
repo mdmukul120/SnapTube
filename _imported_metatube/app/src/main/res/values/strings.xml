@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MetaTube</string>
+    <string name="share_download_label">MetaTube Download</string>
+    <string name="download_channel_name">MetaTube Downloads</string>
+    <string name="download_channel_desc">Multi-threaded video and MP3 download progress</string>
+    <string name="playback_channel_name">MetaTube Media Playback</string>
+    <string name="playback_channel_desc">Background audio and video playback controls</string>
+</resources>
