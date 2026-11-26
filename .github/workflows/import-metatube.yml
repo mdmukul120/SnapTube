@@ -22,19 +22,20 @@ jobs:
           ref: arena/c5bfd128-snaptube
           fetch-depth: 0
 
-      - name: Download and inspect metatube.zip
+      - name: Download and extract metatube.zip
         run: |
           if [ -d "_imported_metatube" ]; then
             echo "Already imported"
             exit 0
           fi
           curl -fSL -o /tmp/metatube.zip "https://github.com/mdmukul120/meta-tube-/releases/download/meta/metatube.zip"
+          unzip -l /tmp/metatube.zip > _metatube_zip_manifest.txt
           mkdir -p _imported_metatube
           unzip -q -o /tmp/metatube.zip -d _imported_metatube
+          # Clean embedded VCS/cache directories and AI Studio raw secret dump txt files
           find _imported_metatube -name ".git" -exec rm -rf {} + || true
           find _imported_metatube \( -name "node_modules" -o -name ".gradle" -o -name "__pycache__" -o -name ".DS_Store" \) -exec rm -rf {} + || true
-          find _imported_metatube -maxdepth 4 | sort > /tmp/tree.txt
-          head -n 60 /tmp/tree.txt
+          rm -rf _imported_metatube/public/assets/aistudio/*.txt || true
 
       - name: Commit imported source to branch
         run: |
@@ -42,9 +43,8 @@ jobs:
           git config user.name "mdmukul120"
           git config user.email "143794390+mdmukul120@users.noreply.github.com"
           git checkout -B arena/c5bfd128-snaptube
-          git add -A _imported_metatube > /tmp/git.log 2>&1
+          git add -A _imported_metatube _metatube_zip_manifest.txt > /tmp/git.log 2>&1
           RC1=$?
-          git status --short | head -n 50 >> /tmp/git.log 2>&1
           git commit -m "chore: import metatube.zip source for audit and APK build [skip ci]" >> /tmp/git.log 2>&1
           RC2=$?
           git push origin HEAD:refs/heads/arena/c5bfd128-snaptube >> /tmp/git.log 2>&1
