@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:name=".MetaTubeApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MetaTube"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MetaTube">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Custom Download Button in Android Share Sheet for any shared video/audio link -->
+            <intent-filter android:label="@string/share_download_label">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <!-- Direct deep link handling for supported video URLs -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="www.youtube.com" />
+                <data android:scheme="https" android:host="youtube.com" />
+                <data android:scheme="https" android:host="m.youtube.com" />
+                <data android:scheme="https" android:host="youtu.be" />
+                <data android:scheme="https" android:host="music.youtube.com" />
+                <data android:scheme="https" android:host="www.tiktok.com" />
+                <data android:scheme="https" android:host="vt.tiktok.com" />
+                <data android:scheme="https" android:host="vm.tiktok.com" />
+                <data android:scheme="https" android:host="www.instagram.com" />
+                <data android:scheme="https" android:host="www.facebook.com" />
+                <data android:scheme="https" android:host="m.facebook.com" />
+                <data android:scheme="https" android:host="fb.watch" />
+                <data android:scheme="https" android:host="soundcloud.com" />
+                <data android:scheme="https" android:host="x.com" />
+                <data android:scheme="https" android:host="twitter.com" />
+                <data android:scheme="https" android:host="www.dailymotion.com" />
+                <data android:scheme="https" android:host="dai.ly" />
+                <data android:scheme="https" android:host="www.reddit.com" />
+                <data android:scheme="https" android:host="v.redd.it" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.DownloadForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

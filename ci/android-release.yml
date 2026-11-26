@@ -1,0 +1,97 @@
+name: MetaTube Android CI & Release
+
+on:
+  push:
+    branches:
+      - 'arena/c5bfd128-snaptube'
+      - main
+      - master
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_release:
+    name: Build, Test & Release MetaTube APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Accept Android SDK Licenses
+        shell: bash
+        run: |
+          if [ -n "$ANDROID_HOME" ] && [ -x "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" ]; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
+          fi
+
+      - name: Set up Gradle 9.3.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.3.1"
+
+      - name: Prepare debug keystore and environment
+        shell: bash
+        run: |
+          if [ ! -f debug.keystore ]; then
+            if [ -f debug.keystore.base64 ]; then
+              base64 -d debug.keystore.base64 > debug.keystore
+            else
+              keytool -genkeypair -v \
+                -keystore debug.keystore \
+                -storepass android \
+                -keypass android \
+                -alias androiddebugkey \
+                -keyalg RSA -keysize 2048 -validity 10000 \
+                -dname "CN=Android Debug, O=Android, C=US"
+            fi
+          fi
+          cp -n .env.example .env || true
+          if [ -n "${{ secrets.YOUTUBE_INNERTUBE_KEY }}" ]; then
+            echo "YOUTUBE_INNERTUBE_KEY=${{ secrets.YOUTUBE_INNERTUBE_KEY }}" >> .env
+          fi
+
+      - name: Configure Release Signing Keystore
+        shell: bash
+        run: |
+          if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
+            echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > "${{ github.workspace }}/release-upload-key.jks"
+            echo "KEYSTORE_PATH=${{ github.workspace }}/release-upload-key.jks" >> "$GITHUB_ENV"
+            echo "STORE_PASSWORD=${{ secrets.STORE_PASSWORD }}" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=${{ secrets.KEY_PASSWORD }}" >> "$GITHUB_ENV"
+          else
+            CI_PASS="metatube-release-2026"
+            keytool -genkeypair -v \
+              -keystore "${{ github.workspace }}/release-upload-key.jks" \
+              -storepass "$CI_PASS" \
+              -keypass "$CI_PASS" \
+              -alias upload \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=MetaTube, OU=Mobile, O=MetaTube, L=Dhaka, S=BD, C=BD"
+            echo "KEYSTORE_PATH=${{ github.workspace }}/release-upload-key.jks" >> "$GITHUB_ENV"
+            echo "STORE_PASSWORD=$CI_PASS" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=$CI_PASS" >> "$GITHUB_ENV"
+          fi
+
+      - name: Run Unit & Robolectric Tests
+        run: gradle :app:testDebugUnitTest --no-daemon
+
+      - name: Run Android Lint
+        run: gradle :app:lintDebug --no-daemon
+
+      - name: Build Signed Release & Debug APKs and AAB
+        run: gradle :app:assembleRelease :app:assembleDebug :app:bundleRelease --no-daemon

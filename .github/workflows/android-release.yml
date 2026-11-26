@@ -1,0 +1,189 @@
+name: MetaTube Android CI & Release
+
+on:
+  push:
+    branches:
+      - 'arena/c5bfd128-snaptube'
+      - main
+      - master
+    tags:
+      - "v*"
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build_and_release:
+    name: Build, Test & Release MetaTube APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Accept Android SDK Licenses
+        shell: bash
+        run: |
+          if [ -n "$ANDROID_HOME" ] && [ -x "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" ]; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null 2>&1 || true
+          fi
+
+      - name: Set up Gradle 9.3.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.3.1"
+
+      - name: Prepare debug keystore and environment
+        shell: bash
+        run: |
+          if [ ! -f debug.keystore ]; then
+            if [ -f debug.keystore.base64 ]; then
+              base64 -d debug.keystore.base64 > debug.keystore
+            else
+              keytool -genkeypair -v \
+                -keystore debug.keystore \
+                -storepass android \
+                -keypass android \
+                -alias androiddebugkey \
+                -keyalg RSA -keysize 2048 -validity 10000 \
+                -dname "CN=Android Debug, O=Android, C=US"
+            fi
+          fi
+          cp -n .env.example .env || true
+          if [ -n "${{ secrets.YOUTUBE_INNERTUBE_KEY }}" ]; then
+            echo "YOUTUBE_INNERTUBE_KEY=${{ secrets.YOUTUBE_INNERTUBE_KEY }}" >> .env
+          fi
+
+      - name: Configure Release Signing Keystore
+        shell: bash
+        run: |
+          if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
+            echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > "${{ github.workspace }}/release-upload-key.jks"
+            echo "KEYSTORE_PATH=${{ github.workspace }}/release-upload-key.jks" >> "$GITHUB_ENV"
+            echo "STORE_PASSWORD=${{ secrets.STORE_PASSWORD }}" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=${{ secrets.KEY_PASSWORD }}" >> "$GITHUB_ENV"
+          else
+            CI_PASS="metatube-release-2026"
+            keytool -genkeypair -v \
+              -keystore "${{ github.workspace }}/release-upload-key.jks" \
+              -storepass "$CI_PASS" \
+              -keypass "$CI_PASS" \
+              -alias upload \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=MetaTube, OU=Mobile, O=MetaTube, L=Dhaka, S=BD, C=BD"
+            echo "KEYSTORE_PATH=${{ github.workspace }}/release-upload-key.jks" >> "$GITHUB_ENV"
+            echo "STORE_PASSWORD=$CI_PASS" >> "$GITHUB_ENV"
+            echo "KEY_PASSWORD=$CI_PASS" >> "$GITHUB_ENV"
+          fi
+
+      - name: Run Unit & Robolectric Tests
+        shell: bash
+        run: |
+          set +e
+          gradle :app:testDebugUnitTest --no-daemon > /tmp/test.log 2>&1
+          RC=$?
+          cat /tmp/test.log
+          if [ $RC -ne 0 ]; then
+            MSG=$(tail -c 3500 /tmp/test.log | tr '\n' ' ')
+            echo "::error title=UnitTestFailed::RC=$RC :: $MSG"
+            exit $RC
+          fi
+
+      - name: Run Android Lint
+        shell: bash
+        run: |
+          set +e
+          gradle :app:lintDebug --no-daemon > /tmp/lint.log 2>&1
+          RC=$?
+          cat /tmp/lint.log
+          if [ $RC -ne 0 ]; then
+            MSG=$(tail -c 3500 /tmp/lint.log | tr '\n' ' ')
+            echo "::error title=LintFailed::RC=$RC :: $MSG"
+            exit $RC
+          fi
+
+      - name: Build Signed Release & Debug APKs and AAB
+        shell: bash
+        run: |
+          set +e
+          gradle :app:assembleRelease :app:assembleDebug :app:bundleRelease --no-daemon > /tmp/build.log 2>&1
+          RC=$?
+          cat /tmp/build.log
+          if [ $RC -ne 0 ]; then
+            MSG=$(tail -c 3500 /tmp/build.log | tr '\n' ' ')
+            echo "::error title=BuildFailed::RC=$RC :: $MSG"
+            exit $RC
+          fi
+          mkdir -p /tmp/release-out
+          cp app/build/outputs/apk/release/app-release.apk /tmp/release-out/MetaTube-v2.4.1-release.apk
+          cp app/build/outputs/apk/debug/app-debug.apk /tmp/release-out/MetaTube-v2.4.1-debug.apk
+          cp app/build/outputs/bundle/release/app-release.aab /tmp/release-out/MetaTube-v2.4.1-release.aab
+          ls -lh /tmp/release-out/
+          sha256sum /tmp/release-out/MetaTube-v2.4.1-release.apk
+
+      - name: Verify Signed Release APK
+        shell: bash
+        run: |
+          set +e
+          APKSIGNER=$(find "$ANDROID_HOME/build-tools" -name "apksigner" | sort -V | tail -n 1)
+          AAPT2=$(find "$ANDROID_HOME/build-tools" -name "aapt2" | sort -V | tail -n 1)
+          echo "Using apksigner=$APKSIGNER aapt2=$AAPT2"
+          VERIFY_OUT=$("$APKSIGNER" verify --verbose /tmp/release-out/MetaTube-v2.4.1-release.apk 2>&1)
+          RC=$?
+          echo "$VERIFY_OUT"
+          BADGING=$("$AAPT2" dump badging /tmp/release-out/MetaTube-v2.4.1-release.apk | head -n 10)
+          echo "$BADGING"
+          SIZE=$(stat -c%s /tmp/release-out/MetaTube-v2.4.1-release.apk)
+          SHA=$(sha256sum /tmp/release-out/MetaTube-v2.4.1-release.apk | awk '{print $1}')
+          if [ $RC -ne 0 ]; then
+            echo "::error title=ApkVerifyFailed::$VERIFY_OUT"
+            exit $RC
+          fi
+          echo "::notice title=ApkVerified::size=${SIZE} sha256=${SHA} $(echo "$BADGING" | head -n 1)"
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: MetaTube-v2.4.1-APK-Bundle
+          path: /tmp/release-out/*
+          if-no-files-found: error
+
+      - name: Publish MetaTube APK to GitHub Releases
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="v2.4.1"
+          NOTES="### MetaTube v2.4.1 — Signed Android APK (Bug-Fixed Build)
+
+          - **Direct Release APK (Recommended):** \`MetaTube-v2.4.1-release.apk\`
+          - **Debug APK:** \`MetaTube-v2.4.1-debug.apk\`
+          - **Play App Bundle:** \`MetaTube-v2.4.1-release.aab\`
+
+          Built & verified via GitHub Actions (Unit Tests + Robolectric + Android Lint + APK Signature Verified)."
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" \
+              /tmp/release-out/MetaTube-v2.4.1-release.apk \
+              /tmp/release-out/MetaTube-v2.4.1-debug.apk \
+              /tmp/release-out/MetaTube-v2.4.1-release.aab \
+              --clobber
+          else
+            gh release create "$TAG" \
+              /tmp/release-out/MetaTube-v2.4.1-release.apk \
+              /tmp/release-out/MetaTube-v2.4.1-debug.apk \
+              /tmp/release-out/MetaTube-v2.4.1-release.aab \
+              --target "${{ github.sha }}" \
+              --title "MetaTube v2.4.1 — Android APK" \
+              --notes "$NOTES"
+          fi
