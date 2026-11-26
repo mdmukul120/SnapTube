@@ -1,0 +1,93 @@
+{
+  "updated_at_utc": "2026-11-26 18:28:47 UTC",
+  "sources": [
+    {
+      "url": "https://c.playtek.xyz/2-xmnhab.json",
+      "status": "ok",
+      "detected_format": "cfj1_config",
+      "config": {
+        "schema": 1,
+        "templateVersion": 1,
+        "Mode": "GenZ",
+        "api_url": "https://rtsplays.com/data/",
+        "api2": "https://rtsplays.com/data/",
+        "api3": "https://cricyplayers.com/data/",
+        "min_version_code": 53,
+        "enabled": true,
+        "telegram_url": "",
+        "web_url": "",
+        "download_url": "",
+        "app_version": 53,
+        "app_versions": "53",
+        "message": "New Version Available. Click here to visit our official website and update to the latest version.",
+        "message_url": "https://cricfy.biz/",
+        "updates_enabled": true,
+        "latest_version_code": 53,
+        "update_allowed_versions": "53",
+        "update_url": "https://cricfy.biz/",
+        "update_download_url": "https://apk.cricfy.biz/files/CRICFy_Latest_Version_Official.apk",
+        "update_web_url": "https://cricfy.biz/",
+        "update_change_log": "no",
+        "external_ad_enabled": true,
+        "external_ad_url": "https://reatasesetitoefa.com?HqJvV=1284362",
+        "external_ad_repeat_after": 3,
+        "edge_policy_enabled": false,
+        "edge_policy_hosts": [
+          "cricfy-tv.net"
+        ],
+        "support_ad_enabled": true,
+        "support_ad_url": "https://reatasesetitoefa.com?HqJvV=1284362",
+        "support_wait_seconds": 12,
+        "support_reopen_hours": 12,
+        "support_open_tutorial": false,
+        "share_url": ""
+      }
+    },
+    {
+      "url": "https://p.playtek.xyz/2-xmnhab.json",
+      "status": "failed",
+      "error": "<urlopen error [Errno -2] Name or service not known>"
+    }
+  ],
+  "active_config": {
+    "schema": 1,
+    "templateVersion": 1,
+    "Mode": "GenZ",
+    "api_url": "https://rtsplays.com/data/",
+    "api2": "https://rtsplays.com/data/",
+    "api3": "https://cricyplayers.com/data/",
+    "min_version_code": 53,
+    "enabled": true,
+    "telegram_url": "",
+    "web_url": "",
+    "download_url": "",
+    "app_version": 53,
+    "app_versions": "53",
+    "message": "New Version Available. Click here to visit our official website and update to the latest version.",
+    "message_url": "https://cricfy.biz/",
+    "updates_enabled": true,
+    "latest_version_code": 53,
+    "update_allowed_versions": "53",
+    "update_url": "https://cricfy.biz/",
+    "update_download_url": "https://apk.cricfy.biz/files/CRICFy_Latest_Version_Official.apk",
+    "update_web_url": "https://cricfy.biz/",
+    "update_change_log": "no",
+    "external_ad_enabled": true,
+    "external_ad_url": "https://reatasesetitoefa.com?HqJvV=1284362",
+    "external_ad_repeat_after": 3,
+    "edge_policy_enabled": false,
+    "edge_policy_hosts": [
+      "cricfy-tv.net"
+    ],
+    "support_ad_enabled": true,
+    "support_ad_url": "https://reatasesetitoefa.com?HqJvV=1284362",
+    "support_wait_seconds": 12,
+    "support_reopen_hours": 12,
+    "support_open_tutorial": false,
+    "share_url": ""
+  },
+  "resolved_api_bases": [
+    "https://rtsplays.com/data/",
+    "https://cricyplayers.com/data/"
+  ]
+}

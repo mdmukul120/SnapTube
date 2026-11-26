@@ -1,0 +1,3743 @@
+{
+  "status": "success",
+  "updated_at_utc": "2026-11-26 18:28:47 UTC",
+  "updated_at_bdt": "2026-11-27 12:28:47 AM BDT",
+  "links_info": {
+    "raw_url": "https://raw.githubusercontent.com/mdmukul120/SnapTube/arena/7db00d9e-snaptube/match.json",
+    "pages_url": "https://mdmukul120.github.io/SnapTube/match.json",
+    "source_configs": [
+      {
+        "url": "https://c.playtek.xyz/2-xmnhab.json",
+        "status": "ok",
+        "detected_format": "cfj1_config"
+      },
+      {
+        "url": "https://p.playtek.xyz/2-xmnhab.json",
+        "status": "failed",
+        "detected_format": null
+      }
+    ],
+    "events_decoder": {
+      "api_base": "https://rtsplays.com/data/",
+      "resource_path": "v2/events.txt",
+      "detected_format": "v2_z9_q7_b"
+    },
+    "tournament_logos_decoder": {
+      "api_base": "https://rtsplays.com/data/",
+      "resource_path": "v2/event_cats.txt",
+      "detected_format": "v2_z9_q7_b"
+    },
+    "decoder_self_test": {
+      "cfg_material_32b": true,
+      "xor_hex_roundtrip": true,
+      "swap_pairs_reverse": true,
+      "clean_base64_pad": true,
+      "repair_json_obj": true,
+      "repair_json_arr": true,
+      "keys_loaded": true
+    }
+  },
+  "total_matches": 67,
+  "live_matches": 20,
+  "upcoming_matches": 36,
+  "tournament_logos": {
+    "Serie A": "https://access-control-center-prod.freevision.live/ss/tournament/23.png",
+    "Bundesliga": "https://access-control-center-prod.freevision.live/ss/tournament/35.png",
+    "Championship": "https://access-control-center-prod.freevision.live/ss/tournament/18.png",
+    "Saudi Pro League": "https://access-control-center-prod.freevision.live/ss/tournament/955.png",
+    "Premier League": "http://api.sofascore.com/api/v1/unique-tournament/17/image/dark",
+    "LaLiga": "http://api.sofascore.com/api/v1/unique-tournament/8/image/dark",
+    "LaLiga 2": "http://api.sofascore.com/api/v1/unique-tournament/54/image/dark",
+    "Trendyol Süper Lig": "http://api.sofascore.com/api/v1/unique-tournament/52/image/dark",
+    "Ligue 1": "http://api.sofascore.com/api/v1/unique-tournament/34/image/dark",
+    "Scottish Premiership": "http://api.sofascore.com/api/v1/unique-tournament/36/image/dark",
+    "2. Bundesliga": "http://api.sofascore.com/api/v1/unique-tournament/44/image/dark",
+    "Liga F Moeve": "http://api.sofascore.com/api/v1/unique-tournament/1127/image/dark",
+    "Formula 1": "https://scdnmain.net/assets/tournament/40-c.png",
+    "WWE": "https://static.wikia.nocookie.net/wweuniverse/images/f/f6/Wwelogo.png/revision/latest?cb=20101124080717",
+    "Aussie rules": "http://api.sofascore.com/api/v1/unique-tournament/10159/image/dark",
+    "American football": "https://img.sofascore.com/api/v1/unique-tournament/9464/image",
+    "Darts": "https://img.sofascore.com/api/v1/unique-tournament/751/image",
+    "USL Championship": "http://api.sofascore.com/api/v1/unique-tournament/13363/image/dark",
+    "King's Cup": "http://api.sofascore.com/api/v1/unique-tournament/2058/image/dark",
+    "Copa del Rey": "http://api.sofascore.com/api/v1/unique-tournament/329/image/dark",
+    "Golf": "https://q.golf/cdn/shop/products/face_2048x2048.jpg?v=1672959337",
+    "UCL": "http://api.sofascore.com/api/v1/unique-tournament/7/image/dark",
+    "DAZN LIVE": "https://i.ibb.co/C5fPZjPy/images-12.jpg",
+    "NETBALL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSygpTxyPIX3ZkSvPFaDLL3iPDscve1yvyJaQ&usqp=CAU",
+    "World Cup Qual. UEFA": "http://api.sofascore.com/api/v1/unique-tournament/11/image/dark",
+    "Handball": "http://api.sofascore.com/api/v1/unique-tournament/165/image/dark",
+    "PUBG": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWlfYzJmW1CgrTei2WUk_9LuuUoIX_gtTl8n46uUfZBw&s=10",
+    "EPL": "http://api.sofascore.com/api/v1/unique-tournament/17/image/dark",
+    "Rugby": "https://casinoxroyal.net/images/rugby.png",
+    "MotoGP": "https://casinoxroyal.net/images/MOTO.webp",
+    "AFL": "https://upload.wikimedia.org/wikipedia/en/archive/9/91/20250627131251%21AFL-Logo_RGB_white_border.png",
+    "Mixed Martial Arts": "https://kucingapk.cc/wp-content/uploads/2026/09/MMA.png",
+    "Football": "https://www.thiings.co/_next/image?url=https://lftz25oez4aqbxpq.public.blob.vercel-storage.com/image-HSHCfamfmrRJe2qzudsJk9N4k3ySBB.png&w=320&q=75",
+    "Cricket": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-COfvWpAYvRueX3S5L3lb3qWYCyvJlZ.png&w=320&q=75",
+    "Boxing": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-saKmXkEcaP7q680JSkKfeavyiK02CZ.png&w=320&q=75",
+    "Motorsport": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-wjWrUv5N1kzlKGCaqdVE28g8y43jbF.png&w=320&q=75",
+    "Basketball": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-wtyoroPu9pUAx5xLx8Cnko454idKhb.png&w=320&q=75",
+    "Hockey": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-kTtPemZDWw513tN4C4SdtPX5KaPX6n.png&w=320&q=75",
+    "Tennis": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-BBXTV4LAEedO5jo0W6YkMkVyTlmflS.png&w=320&q=75",
+    "Baseball": "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-hKj5BN3zRfTTWfN5tALws4dUbjwboS.png&w=320&q=75",
+    "NFL": "https://www.svgheart.com/wp-content/uploads/2020/07/nfl-american-football-free-svg-file-724x1024.png"
+  },
+  "matches": [
+    {
+      "id": 3174,
+      "order_index": 22,
+      "title": "International League T20",
+      "category": "Cricket",
+      "tournament": "International League T20",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6f3IJM3zVoiU45GX2IhNPDjAyupyyFamzZwFnB5D6w&s=10",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "14:30:00",
+      "start_utc": "2026-11-26T14:30:00+00:00",
+      "start_bdt": "2026-11-26 08:30 PM BDT",
+      "start_ist": "2026-11-26 08:00 PM IST",
+      "teamA": {
+        "name": "ILT T20",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6f3IJM3zVoiU45GX2IhNPDjAyupyyFamzZwFnB5D6w&s=10"
+      },
+      "teamB": {
+        "name": "ILT T20",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl6f3IJM3zVoiU45GX2IhNPDjAyupyyFamzZwFnB5D6w&s=10"
+      },
+      "priority": -1,
+      "total_streams": 8,
+      "streams": [
+        {
+          "name": "FANCODE FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "82dfca238e8c4b430a3269db71965db9",
+            "key": "a00b28caf4ac628e77a553d440c0ddca",
+            "raw": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca"
+          }
+        },
+        {
+          "name": "TNT SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "69a5aa835a061ce64a630d1046727e40",
+            "key": "d02feac8a999bd06bf4059bf33411749",
+            "raw": "69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/lvpxnd9lm7/out/v1/ec8487d426a14be59423e84d2fb4c8ee/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/lvpxnd9lm7/out/v1/ec8487d426a14be59423e84d2fb4c8ee/cenc.mpd",
+          "scheme": 0,
+          "api": "d7070587c4a7d8db325db4540da4777c:c474bc272c73fdce1298511ac95bfdce",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "d7070587c4a7d8db325db4540da4777c",
+            "key": "c474bc272c73fdce1298511ac95bfdce",
+            "raw": "d7070587c4a7d8db325db4540da4777c:c474bc272c73fdce1298511ac95bfdce"
+          }
+        },
+        {
+          "name": "UNITE8 HIN HD",
+          "type": "hls",
+          "url": "http://103.205.132.29:8081/Unite8-sports-1/index.m3u8",
+          "link": "http://103.205.132.29:8081/Unite8-sports-1/index.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "FANCODE SD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "82dfca238e8c4b430a3269db71965db9",
+            "key": "a00b28caf4ac628e77a553d440c0ddca",
+            "raw": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca"
+          }
+        },
+        {
+          "name": "ZEE ZEST (IND)",
+          "type": "dash",
+          "url": "https://d1iwj24qiokrul.cloudfront.net/live/media/Zee_Zest_SD/dash/Zee_Zest_SD.mpd",
+          "link": "https://d1iwj24qiokrul.cloudfront.net/live/media/Zee_Zest_SD/dash/Zee_Zest_SD.mpd",
+          "scheme": 0,
+          "api": "ffa2f9e64ca542f9a13f6ebc11292468:ac0b546c754884618e5b2c2c986e4735",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "ffa2f9e64ca542f9a13f6ebc11292468",
+            "key": "ac0b546c754884618e5b2c2c986e4735",
+            "raw": "ffa2f9e64ca542f9a13f6ebc11292468:ac0b546c754884618e5b2c2c986e4735"
+          }
+        },
+        {
+          "name": "ZEE ZEST (IND)",
+          "type": "dash",
+          "url": "https://d1iwj24qiokrul.cloudfront.net/live/media/Zee_Zest_SD/dash/Zee_Zest_SD.mpd",
+          "link": "https://d1iwj24qiokrul.cloudfront.net/live/media/Zee_Zest_SD/dash/Zee_Zest_SD.mpd",
+          "scheme": 0,
+          "api": "ffa2f9e64ca542f9a13f6ebc11292468:ac0b546c754884618e5b2c2c986e4735",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "ffa2f9e64ca542f9a13f6ebc11292468",
+            "key": "ac0b546c754884618e5b2c2c986e4735",
+            "raw": "ffa2f9e64ca542f9a13f6ebc11292468:ac0b546c754884618e5b2c2c986e4735"
+          }
+        },
+        {
+          "name": "UNITE8 SPORTS (IND)",
+          "type": "dash",
+          "url": "https://d1iwj24qiokrul.cloudfront.net/live/media/Unite8_Sports_1_HD/dash/Unite8_Sports_1_HD.mpd",
+          "link": "https://d1iwj24qiokrul.cloudfront.net/live/media/Unite8_Sports_1_HD/dash/Unite8_Sports_1_HD.mpd",
+          "scheme": 0,
+          "api": "d5859726f4804398b37aa6eb9d571a4f:11c43967054ad1765d919f854889912f",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "d5859726f4804398b37aa6eb9d571a4f",
+            "key": "11c43967054ad1765d919f854889912f",
+            "raw": "d5859726f4804398b37aa6eb9d571a4f:11c43967054ad1765d919f854889912f"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3414,
+      "order_index": 207,
+      "title": "Dinamo vs Leverkusen",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Dinamo",
+        "logo": "https://img.sofascore.com/api/v1/team/2032/image"
+      },
+      "teamB": {
+        "name": "Leverkusen",
+        "logo": "https://img.sofascore.com/api/v1/team/2681/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3416,
+      "order_index": 209,
+      "title": "Egnatia vs Lincoln RI",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Egnatia",
+        "logo": "https://img.sofascore.com/api/v1/team/264619/image"
+      },
+      "teamB": {
+        "name": "Lincoln RI",
+        "logo": "https://img.sofascore.com/api/v1/team/126304/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3418,
+      "order_index": 211,
+      "title": "Beşiktaş vs H. Be'er Sheva",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Beşiktaş",
+        "logo": "https://img.sofascore.com/api/v1/team/3050/image"
+      },
+      "teamB": {
+        "name": "H. Be'er Sheva",
+        "logo": "https://img.sofascore.com/api/v1/team/5202/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3419,
+      "order_index": 212,
+      "title": "Viktoria Plzeň vs Benfica",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Viktoria Plzeň",
+        "logo": "https://img.sofascore.com/api/v1/team/4502/image"
+      },
+      "teamB": {
+        "name": "Benfica",
+        "logo": "https://img.sofascore.com/api/v1/team/3006/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3420,
+      "order_index": 213,
+      "title": "Brighton vs U. Craiova",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Brighton",
+        "logo": "https://img.sofascore.com/api/v1/team/30/image"
+      },
+      "teamB": {
+        "name": "U. Craiova",
+        "logo": "https://img.sofascore.com/api/v1/team/116223/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3421,
+      "order_index": 214,
+      "title": "Celta vs Bournemouth",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Celta",
+        "logo": "https://img.sofascore.com/api/v1/team/2821/image"
+      },
+      "teamB": {
+        "name": "Bournemouth",
+        "logo": "https://img.sofascore.com/api/v1/team/60/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3422,
+      "order_index": 215,
+      "title": "USG vs Lech",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "USG",
+        "logo": "https://img.sofascore.com/api/v1/team/4860/image"
+      },
+      "teamB": {
+        "name": "Lech",
+        "logo": "https://img.sofascore.com/api/v1/team/3121/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3428,
+      "order_index": 221,
+      "title": "Ajax vs Thun",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Ajax",
+        "logo": "https://img.sofascore.com/api/v1/team/2953/image"
+      },
+      "teamB": {
+        "name": "Thun",
+        "logo": "https://img.sofascore.com/api/v1/team/2454/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3429,
+      "order_index": 222,
+      "title": "Brann vs AGF",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Brann",
+        "logo": "https://img.sofascore.com/api/v1/team/1159/image"
+      },
+      "teamB": {
+        "name": "AGF",
+        "logo": "https://img.sofascore.com/api/v1/team/1291/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3431,
+      "order_index": 224,
+      "title": "Jablonec vs Lugano",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Jablonec",
+        "logo": "https://img.sofascore.com/api/v1/team/2205/image"
+      },
+      "teamB": {
+        "name": "Lugano",
+        "logo": "https://img.sofascore.com/api/v1/team/2443/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3433,
+      "order_index": 226,
+      "title": "Marseille vs Levski Sofia",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Marseille",
+        "logo": "https://img.sofascore.com/api/v1/team/1641/image"
+      },
+      "teamB": {
+        "name": "Levski Sofia",
+        "logo": "https://img.sofascore.com/api/v1/team/3273/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3437,
+      "order_index": 230,
+      "title": "Kauno Žalgiris vs Riga",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Kauno Žalgiris",
+        "logo": "https://img.sofascore.com/api/v1/team/80741/image"
+      },
+      "teamB": {
+        "name": "Riga",
+        "logo": "https://img.sofascore.com/api/v1/team/162368/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3439,
+      "order_index": 232,
+      "title": "Pafos vs Midtjylland",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Pafos",
+        "logo": "https://img.sofascore.com/api/v1/team/171626/image"
+      },
+      "teamB": {
+        "name": "Midtjylland",
+        "logo": "https://img.sofascore.com/api/v1/team/1289/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3440,
+      "order_index": 233,
+      "title": "RB Salzburg vs Ararat-Armenia",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "RB Salzburg",
+        "logo": "https://img.sofascore.com/api/v1/team/2046/image"
+      },
+      "teamB": {
+        "name": "Ararat-Armenia",
+        "logo": "https://img.sofascore.com/api/v1/team/262229/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3441,
+      "order_index": 234,
+      "title": "Hearts vs Monaco",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Hearts",
+        "logo": "https://img.sofascore.com/api/v1/team/2353/image"
+      },
+      "teamB": {
+        "name": "Monaco",
+        "logo": "https://img.sofascore.com/api/v1/team/1653/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3443,
+      "order_index": 236,
+      "title": "Olympiacos vs Milan",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Olympiacos",
+        "logo": "https://img.sofascore.com/api/v1/team/3245/image"
+      },
+      "teamB": {
+        "name": "Milan",
+        "logo": "https://img.sofascore.com/api/v1/team/2692/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3444,
+      "order_index": 237,
+      "title": "Iberia vs Getafe",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:45:00",
+      "start_utc": "2026-11-26T17:45:00+00:00",
+      "start_bdt": "2026-11-26 11:45 PM BDT",
+      "start_ist": "2026-11-26 11:15 PM IST",
+      "teamA": {
+        "name": "Iberia",
+        "logo": "https://img.sofascore.com/api/v1/team/116312/image"
+      },
+      "teamB": {
+        "name": "Getafe",
+        "logo": "https://img.sofascore.com/api/v1/team/2859/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3448,
+      "order_index": 241,
+      "title": "Lions vs Bears",
+      "category": "American football",
+      "tournament": "NFL",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/9464/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "18:00:00",
+      "start_utc": "2026-11-26T18:00:00+00:00",
+      "start_bdt": "2026-11-27 12:00 AM BDT",
+      "start_ist": "2026-11-26 11:30 PM IST",
+      "teamA": {
+        "name": "Lions",
+        "logo": "https://img.sofascore.com/api/v1/team/4419/image"
+      },
+      "teamB": {
+        "name": "Bears",
+        "logo": "https://img.sofascore.com/api/v1/team/4391/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "NFL",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/nfl/2026-11-26/chi-det",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3451,
+      "order_index": 244,
+      "title": "Al Faisaly vs Diriyah",
+      "category": "Football",
+      "tournament": "Saudi Pro League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/955/image/dark",
+      "status": "LIVE",
+      "is_live": true,
+      "date": "26/11/2026",
+      "time": "17:30:00",
+      "start_utc": "2026-11-26T17:30:00+00:00",
+      "start_bdt": "2026-11-26 11:30 PM BDT",
+      "start_ist": "2026-11-26 11:00 PM IST",
+      "teamA": {
+        "name": "Al Faisaly",
+        "logo": "https://img.sofascore.com/api/v1/team/56035/image"
+      },
+      "teamB": {
+        "name": "Diriyah",
+        "logo": "https://img.sofascore.com/api/v1/team/853574/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3061,
+      "order_index": 1,
+      "title": "NZ vs IND",
+      "category": "Cricket",
+      "tournament": "ICC World Test Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/18833/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "22:00:00",
+      "start_utc": "2026-11-26T22:00:00+00:00",
+      "start_bdt": "2026-11-27 04:00 AM BDT",
+      "start_ist": "2026-11-27 03:30 AM IST",
+      "teamA": {
+        "name": "NZ",
+        "logo": "https://img.sofascore.com/api/v1/team/187755/image"
+      },
+      "teamB": {
+        "name": "IND",
+        "logo": "https://img.sofascore.com/api/v1/team/187765/image"
+      },
+      "priority": -1,
+      "total_streams": 11,
+      "streams": [
+        {
+          "name": "WILLOW FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/3yznekgktt/out/v1/858249b12acb46b99a95fbfab5887011/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/3yznekgktt/out/v1/858249b12acb46b99a95fbfab5887011/cenc.mpd",
+          "scheme": 0,
+          "api": "a993ba0f7bf4b83d0ccb44a591e2a51c:2bd5e352dd929f561daa14de1fc1a7a1",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "a993ba0f7bf4b83d0ccb44a591e2a51c",
+            "key": "2bd5e352dd929f561daa14de1fc1a7a1",
+            "raw": "a993ba0f7bf4b83d0ccb44a591e2a51c:2bd5e352dd929f561daa14de1fc1a7a1"
+          }
+        },
+        {
+          "name": "TNT SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd",
+          "scheme": 0,
+          "api": "69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "69a5aa835a061ce64a630d1046727e40",
+            "key": "d02feac8a999bd06bf4059bf33411749",
+            "raw": "69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/3yznekgktt/out/v1/858249b12acb46b99a95fbfab5887011/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/3yznekgktt/out/v1/858249b12acb46b99a95fbfab5887011/cenc.mpd",
+          "scheme": 0,
+          "api": "a993ba0f7bf4b83d0ccb44a591e2a51c:2bd5e352dd929f561daa14de1fc1a7a1",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "a993ba0f7bf4b83d0ccb44a591e2a51c",
+            "key": "2bd5e352dd929f561daa14de1fc1a7a1",
+            "raw": "a993ba0f7bf4b83d0ccb44a591e2a51c:2bd5e352dd929f561daa14de1fc1a7a1"
+          }
+        },
+        {
+          "name": "TAPMAD FHD",
+          "type": "hls",
+          "url": "https://serieAleague.akamaized.net/hls/live/2107107/A1@25853-tapmad/master.m3u8",
+          "link": "https://serieAleague.akamaized.net/hls/live/2107107/A1@25853-tapmad/master.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (ENG)",
+          "type": "hls",
+          "url": "https://liveakmt-p-md.slivcdn.com/hls/live/2119931/cricodi_1911/ENG/master.m3u8?hdnea=exp=1795166897~acl=/*~id=cc222ab9545e24a793c920601723ff4c-1795123696649~hmac=7e42512cbb70ecd0b406c8a76f09f0010ee0b67004dd297f4338e32fedad0137",
+          "link": "https://liveakmt-p-md.slivcdn.com/hls/live/2119931/cricodi_1911/ENG/master.m3u8?hdnea=exp=1795166897~acl=/*~id=cc222ab9545e24a793c920601723ff4c-1795123696649~hmac=7e42512cbb70ecd0b406c8a76f09f0010ee0b67004dd297f4338e32fedad0137|User-Agent=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0%26Referer=https://www.sonyliv.com/%26Origin=https://www.sonyliv.com",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "User-Agent": "User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:150.0) Gecko/20100101 Firefox/150.0%26Referer=https://www.sonyliv.com/%26Origin=https://www.sonyliv.com"
+          }
+        },
+        {
+          "name": "TEN SPORTS HD",
+          "type": "hls",
+          "url": "https://live.msnetworks.net/ten-sports/master.m3u8",
+          "link": "https://live.msnetworks.net/ten-sports/master.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Tapmad - SD",
+          "type": "hls",
+          "url": "https://tencent-cdn.tapmad.com/v1/01a14a9fb90c15fc60e91e1786b061/01a14a9feb881ea540a81c2b41b75e/main.m3u8",
+          "link": "https://tencent-cdn.tapmad.com/v1/01a14a9fb90c15fc60e91e1786b061/01a14a9feb881ea540a81c2b41b75e/main.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (HIN)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119921/cricodi_2211/HIN/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119921/cricodi_2211/HIN/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (TEL)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119941/cricodi_2211/TEL/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119941/cricodi_2211/TEL/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (TAM)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119951/cricodi_2211/TAM/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119951/cricodi_2211/TAM/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (KAN)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119782/cricodi_2211/KAN/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119782/cricodi_2211/KAN/std_lrh-800300010.m3u8?hdnea=exp=1795426927~acl=/*~id=84219570040938269250347123670804~hmac=6603ecc577564305dccf422ccdd48bfd57a48dbf28a6d8b3639adfb22b653070",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 192,
+      "order_index": 2,
+      "title": "MotoGP",
+      "category": "Motorsport",
+      "tournament": "MotoGP",
+      "poster": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgiy9chJNhw1XEU4gM-u6aLV0OGAHC38TO344gN3HFWqeOk5068zqJsQOYTyud9BoDV44JPX0pT2Jr7iVFa-IHUrB80G5N76Q_jUG9qiKNF5Wehb0-DqS6tQ46OpeQFfPfq_K-6icHx6-EZxHj-9cTG5WaqhPNQcqeIOba-XGnMg7ybLyKfEIkFUH5iUg8/s1600/1000009835.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "09:45:00",
+      "start_utc": "2026-11-27T09:45:00+00:00",
+      "start_bdt": "2026-11-27 03:45 PM BDT",
+      "start_ist": "2026-11-27 03:15 PM IST",
+      "teamA": {
+        "name": "MotoGP",
+        "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHudrhyphenhyphenOGNuEpCmd8k8vfTaJ7hTqEb6GemloDedieYFrvM5MJz639vioDvQnlHGBhvxsNBHSLg2ICSGot7LWGA2PDZqoc3W_A3Yu002I5JGUeQgTCG_UFhDRPSJr2E1blnBokZvTYkB6B2nJVeeUy6s28sW-XHRZzCW_J6SOGpaoXx0LB-CH-9iTf1ebc/s1600/1000009837.jpg"
+      },
+      "teamB": {
+        "name": "MotoGP",
+        "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHudrhyphenhyphenOGNuEpCmd8k8vfTaJ7hTqEb6GemloDedieYFrvM5MJz639vioDvQnlHGBhvxsNBHSLg2ICSGot7LWGA2PDZqoc3W_A3Yu002I5JGUeQgTCG_UFhDRPSJr2E1blnBokZvTYkB6B2nJVeeUy6s28sW-XHRZzCW_J6SOGpaoXx0LB-CH-9iTf1ebc/s1600/1000009837.jpg"
+      },
+      "priority": -1,
+      "total_streams": 9,
+      "streams": [
+        {
+          "name": "TNT SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/puehlftk5j/out/v1/f7f0da1ee112481ca0024e6d4dd97f4a/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "f3df7843080ae743bf865dc5fdf64c68",
+            "key": "567c863bc12eb74788ea74888c042e1b",
+            "raw": "f3df7843080ae743bf865dc5fdf64c68:567c863bc12eb74788ea74888c042e1b"
+          }
+        },
+        {
+          "name": "FANCODE FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd",
+          "scheme": 0,
+          "api": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "82dfca238e8c4b430a3269db71965db9",
+            "key": "a00b28caf4ac628e77a553d440c0ddca",
+            "raw": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca"
+          }
+        },
+        {
+          "name": "SPOTV  FHD",
+          "type": "dash",
+          "url": "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd",
+          "link": "https://qp-pldt-live-grp-13-prod.akamaized.net/out/u/dr_spotv2hd.mpd",
+          "scheme": 0,
+          "api": "7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "7eea72d6075245a99ee3255603d58853",
+            "key": "6848ef60575579bf4d415db1032153ed",
+            "raw": "7eea72d6075245a99ee3255603d58853:6848ef60575579bf4d415db1032153ed"
+          }
+        },
+        {
+          "name": "MotoGP FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/wjeweupwyc/out/v1/8197c8e055c94a868623653ac55c10bf/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/wjeweupwyc/out/v1/8197c8e055c94a868623653ac55c10bf/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "e03f302ec4dabcccca82cc9f76731ec9:53ea1027d2bf2893a552cf15bc0366de",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "e03f302ec4dabcccca82cc9f76731ec9",
+            "key": "53ea1027d2bf2893a552cf15bc0366de",
+            "raw": "e03f302ec4dabcccca82cc9f76731ec9:53ea1027d2bf2893a552cf15bc0366de"
+          }
+        },
+        {
+          "name": "SK SPORT MIX FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oln41tn1gj/out/v1/1247ce6ac92b4ee3be02e7082954348a/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/oln41tn1gj/out/v1/1247ce6ac92b4ee3be02e7082954348a/cenc.mpd",
+          "scheme": 0,
+          "api": "fa23a7c0d9c82f0c7b113506e202af8c:a883237ef30932b731f71aa59a0805c0",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "fa23a7c0d9c82f0c7b113506e202af8c",
+            "key": "a883237ef30932b731f71aa59a0805c0",
+            "raw": "fa23a7c0d9c82f0c7b113506e202af8c:a883237ef30932b731f71aa59a0805c0"
+          }
+        },
+        {
+          "name": "MOTO Cricfy",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/57392/load-playlist.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/57392/load-playlist.m3u8?|referer=https://gooz.aapmains.net/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://gooz.aapmains.net/"
+          }
+        },
+        {
+          "name": "Cricfy HD",
+          "type": "hls",
+          "url": "https://tedesco.formaturamaxi.com.br/f1.m3u8",
+          "link": "https://tedesco.formaturamaxi.com.br/f1.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        },
+        {
+          "name": "MotoGP Qatar",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/59363/load-playlist.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/59363/load-playlist.m3u8?|referer=https://gooz.aapmains.net/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://gooz.aapmains.net/"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.44/hls/ziii.m3u8",
+          "link": "http://193.47.62.44/hls/ziii.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 364,
+      "order_index": 3,
+      "title": "ONE Friday Fights",
+      "category": "Boxing",
+      "tournament": "ONE Friday Fights",
+      "poster": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSP3iuChpgOooT8zMmBOZkNpebgboUlRMj0E7BVvBD8FoSww_c1MM8nCMqEdgDlagzUNxmYLparSgZlqmqljJFL-ilGr3BhKEDYmGpOTfidWTGPMTpBgmgAg-u3Hj-fb8Bko5m_xYYkkDdMAo2OYz_277X2v04nHlENGwrtDYiZh9QCNnplVEljBa1t64/s1600/1000026292.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "12:00:00",
+      "start_utc": "2026-11-27T12:00:00+00:00",
+      "start_bdt": "2026-11-27 06:00 PM BDT",
+      "start_ist": "2026-11-27 05:30 PM IST",
+      "teamA": {
+        "name": "Friday Fights",
+        "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSP3iuChpgOooT8zMmBOZkNpebgboUlRMj0E7BVvBD8FoSww_c1MM8nCMqEdgDlagzUNxmYLparSgZlqmqljJFL-ilGr3BhKEDYmGpOTfidWTGPMTpBgmgAg-u3Hj-fb8Bko5m_xYYkkDdMAo2OYz_277X2v04nHlENGwrtDYiZh9QCNnplVEljBa1t64/s1600/1000026292.png"
+      },
+      "teamB": {
+        "name": "Friday Fights",
+        "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSP3iuChpgOooT8zMmBOZkNpebgboUlRMj0E7BVvBD8FoSww_c1MM8nCMqEdgDlagzUNxmYLparSgZlqmqljJFL-ilGr3BhKEDYmGpOTfidWTGPMTpBgmgAg-u3Hj-fb8Bko5m_xYYkkDdMAo2OYz_277X2v04nHlENGwrtDYiZh9QCNnplVEljBa1t64/s1600/1000026292.png"
+      },
+      "priority": -1,
+      "total_streams": 6,
+      "streams": [
+        {
+          "name": "One Fight - AQ",
+          "type": "dash",
+          "url": "https://live-pv-ta.amazon.fastly-edge.com/syd-nitro/live/clients/dash/enc/kkfdbi2d1c/out/v1/a5b9b32dafd5499688240287ef8c9b90/cenc.mpd",
+          "link": "https://live-pv-ta.amazon.fastly-edge.com/syd-nitro/live/clients/dash/enc/kkfdbi2d1c/out/v1/a5b9b32dafd5499688240287ef8c9b90/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "308006101c8fd0262c0f529319b9c127:37683aadc75b1450efa82d62c647984d",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "308006101c8fd0262c0f529319b9c127",
+            "key": "37683aadc75b1450efa82d62c647984d",
+            "raw": "308006101c8fd0262c0f529319b9c127:37683aadc75b1450efa82d62c647984d"
+          }
+        },
+        {
+          "name": "WWE - AQ",
+          "type": "dash",
+          "url": "https://tglmp02.akamaized.net/out/v1/3170252e3fb0453085f2f4b0f8401a6b/manifest.mpd",
+          "link": "https://tglmp02.akamaized.net/out/v1/3170252e3fb0453085f2f4b0f8401a6b/manifest.mpd",
+          "scheme": 0,
+          "api": "60dc08aae52f4c0b806a8e43f24a12c8:30d5b579966d822b215ec51a91d8a271",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "60dc08aae52f4c0b806a8e43f24a12c8",
+            "key": "30d5b579966d822b215ec51a91d8a271",
+            "raw": "60dc08aae52f4c0b806a8e43f24a12c8:30d5b579966d822b215ec51a91d8a271"
+          }
+        },
+        {
+          "name": "WWE - AQ",
+          "type": "dash",
+          "url": "https://v4-pan-n79-cdn-01.live.cdn.cgates.lt/live/dash/561402/index.mpd",
+          "link": "https://v4-pan-n79-cdn-01.live.cdn.cgates.lt/live/dash/561402/index.mpd",
+          "scheme": 0,
+          "api": "a6b967afcb974bb5a549377b4f09befd:87d993257a099324ccd0215475fc61a0",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "a6b967afcb974bb5a549377b4f09befd",
+            "key": "87d993257a099324ccd0215475fc61a0",
+            "raw": "a6b967afcb974bb5a549377b4f09befd:87d993257a099324ccd0215475fc61a0"
+          }
+        },
+        {
+          "name": "Cricfy Live",
+          "type": "hls",
+          "url": "https://fastly.live.brightcove.com/1850722103624061910/ap-southeast-1/6195549636001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiaTE3dzIxLmVncmVzcy5zYjBmOGsiLCJhY2NvdW50X2lkIjoiNjE5NTU0OTYzNjAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MTk1NTQ5NjM2MDAxIl0sImp0aSI6IjE4NTA3MjIxMDM2MjQwNjE5MTAifQ.MQrZwY5puqZGRgWL843gOZ-Y7i2jUGB5McfZKwoOB1I/playlist-hls.m3u8",
+          "link": "https://fastly.live.brightcove.com/1850722103624061910/ap-southeast-1/6195549636001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiaTE3dzIxLmVncmVzcy5zYjBmOGsiLCJhY2NvdW50X2lkIjoiNjE5NTU0OTYzNjAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MTk1NTQ5NjM2MDAxIl0sImp0aSI6IjE4NTA3MjIxMDM2MjQwNjE5MTAifQ.MQrZwY5puqZGRgWL843gOZ-Y7i2jUGB5McfZKwoOB1I/playlist-hls.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Cricfy HD",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/wwe/2026-10-23",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/58874/load-playlist.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/58874/load-playlist.m3u8?|referer=https://gooz.aapmains.net/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://gooz.aapmains.net/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 366,
+      "order_index": 4,
+      "title": "Formula 1",
+      "category": "Motorsport",
+      "tournament": "Formula 1",
+      "poster": "https://scdnmain.net/assets/tournament/40-c.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "13:30:00",
+      "start_utc": "2026-11-27T13:30:00+00:00",
+      "start_bdt": "2026-11-27 07:30 PM BDT",
+      "start_ist": "2026-11-27 07:00 PM IST",
+      "teamA": {
+        "name": "Formula 1",
+        "logo": "https://scdnmain.net/assets/tournament/40-c.png"
+      },
+      "teamB": {
+        "name": "Formula 1",
+        "logo": "https://scdnmain.net/assets/tournament/40-c.png"
+      },
+      "priority": -1,
+      "total_streams": 14,
+      "streams": [
+        {
+          "name": "FANCODE - AQ",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "1994b1df7dfd2e8a8d7b9bf3fb900285",
+            "key": "22a1444b3da18e139191665b3d652835",
+            "raw": "1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835"
+          }
+        },
+        {
+          "name": "SporTV BR FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/add7499679b0422cb6791f7701f95ecc/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/6otiglnptp/out/v1/add7499679b0422cb6791f7701f95ecc/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "902e5ec0e3d05e665daa32fc23f4f59e",
+            "key": "7b2322a273843921a43e2c61dac7cae3",
+            "raw": "902e5ec0e3d05e665daa32fc23f4f59e:7b2322a273843921a43e2c61dac7cae3"
+          }
+        },
+        {
+          "name": "SK SPORT F1 FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/l1pw9fzori/out/v1/68469cf8a4ba49608a0e0fab18d45aee/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/l1pw9fzori/out/v1/68469cf8a4ba49608a0e0fab18d45aee/cenc.mpd",
+          "scheme": 0,
+          "api": "0d7d09d646a2a4edd51b87563abe77a3:a1e63461298a129daa947f42cbad4aa2",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "0d7d09d646a2a4edd51b87563abe77a3",
+            "key": "a1e63461298a129daa947f42cbad4aa2",
+            "raw": "0d7d09d646a2a4edd51b87563abe77a3:a1e63461298a129daa947f42cbad4aa2"
+          }
+        },
+        {
+          "name": "SK TOP EVENT FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/dg9oi3org7/out/v1/e75b690762ba4c4ca72bf30703a4473e/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/dg9oi3org7/out/v1/e75b690762ba4c4ca72bf30703a4473e/cenc.mpd",
+          "scheme": 0,
+          "api": "368bd4ebe301406897324bc777650411:69d27c2c2b7de927d67aacc973259901",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "368bd4ebe301406897324bc777650411",
+            "key": "69d27c2c2b7de927d67aacc973259901",
+            "raw": "368bd4ebe301406897324bc777650411:69d27c2c2b7de927d67aacc973259901"
+          }
+        },
+        {
+          "name": "FANCODE SD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash-sd/enc/eayjamsonn/out/v1/6c25cddab58043a6ace0ac64d97983f0/cenc-sd.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash-sd/enc/eayjamsonn/out/v1/6c25cddab58043a6ace0ac64d97983f0/cenc-sd.mpd",
+          "scheme": 0,
+          "api": "5318e462b9e0677487cb87837f0bbdb1:4fa0fb973b95738306005f2e8591bf8e",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "5318e462b9e0677487cb87837f0bbdb1",
+            "key": "4fa0fb973b95738306005f2e8591bf8e",
+            "raw": "5318e462b9e0677487cb87837f0bbdb1:4fa0fb973b95738306005f2e8591bf8e"
+          }
+        },
+        {
+          "name": "CGPT LIVE",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/60456/load-playlist.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/60456/load-playlist.m3u8?|referer=https://gooz.aapmains.net/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://gooz.aapmains.net/"
+          }
+        },
+        {
+          "name": "CGPT ALT",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/59362/load-playlist.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/59362/load-playlist.m3u8?|referer=https://gooz.aapmains.net/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://gooz.aapmains.net/"
+          }
+        },
+        {
+          "name": "APPLE TV",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/united-states-grand-prix---race-30888",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "SK sports F1",
+          "type": "hls",
+          "url": "https://admin2.formaturamaxi.com.br/f1.m3u8",
+          "link": "https://admin2.formaturamaxi.com.br/f1.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "RUSSIA FEED",
+          "type": "hls",
+          "url": "https://bl.rutube.ru/livestream/d11d0145804d4321a677aacb62984de8/index.m3u8?s=k9d3abxTJHkJWs65bDRXjg&e=1791806247&scheme=https",
+          "link": "https://bl.rutube.ru/livestream/d11d0145804d4321a677aacb62984de8/index.m3u8?s=k9d3abxTJHkJWs65bDRXjg&e=1791806247&scheme=https|user-agent=Mozilla",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "user-agent": "Mozilla"
+          }
+        },
+        {
+          "name": "DAZN ESPANOL [FHD]",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/united-states-grand-prix---race-30890",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "SportCast",
+          "type": "hls",
+          "url": "https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/58464152-0ce6-4e18-a3c1-393ba5669a09/master.m3u8",
+          "link": "https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/58464152-0ce6-4e18-a3c1-393ba5669a09/master.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Cricfy Live",
+          "type": "hls",
+          "url": "https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/01d9a0cb-902a-4045-bc6c-7672230a7cfd/master.m3u8",
+          "link": "https://live.kinescopecdn.net/on-air/5bf2c07e-3604-42cf-959a-67ed8914ffd5/01d9a0cb-902a-4045-bc6c-7672230a7cfd/master.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.41/hls/R333AAAA.m3u8",
+          "link": "http://193.47.62.41/hls/R333AAAA.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 792,
+      "order_index": 5,
+      "title": "WWE Friday Night SmackDown",
+      "category": "Boxing",
+      "tournament": "WWE Friday Night SmackDown",
+      "poster": "https://www.wwe.com/f/styles/wwe_show_logo_l/public/all/2024/09/Smackdown_LOGO--c8e0b09904cb1356d309a8ea2acb0422.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "28/11/2026",
+      "time": "00:00:00",
+      "start_utc": "2026-11-28T00:00:00+00:00",
+      "start_bdt": "2026-11-28 06:00 AM BDT",
+      "start_ist": "2026-11-28 05:30 AM IST",
+      "teamA": {
+        "name": "Friday Night SmackDown",
+        "logo": "https://www.wwe.com/f/styles/wwe_show_logo_l/public/all/2024/09/Smackdown_LOGO--c8e0b09904cb1356d309a8ea2acb0422.png"
+      },
+      "teamB": {
+        "name": "Friday Night SmackDown",
+        "logo": "https://www.wwe.com/f/styles/wwe_show_logo_l/public/all/2024/09/Smackdown_LOGO--c8e0b09904cb1356d309a8ea2acb0422.png"
+      },
+      "priority": -1,
+      "total_streams": 6,
+      "streams": [
+        {
+          "name": "Cricfy WWE",
+          "type": "direct",
+          "url": "https://chatgpt.hereisman.net/playlist/58881/load-playlist",
+          "link": "https://chatgpt.hereisman.net/playlist/58881/load-playlist?|Referer=https://gooz.aapmains.net",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://gooz.aapmains.net"
+          }
+        },
+        {
+          "name": "WWE LIVE FHD",
+          "type": "hls",
+          "url": "https://jellyfin.fromthyheart.site/dailymotion/live/playlist/1.m3u8",
+          "link": "https://jellyfin.fromthyheart.site/dailymotion/live/playlist/1.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Cricfy TV+ HD",
+          "type": "hls",
+          "url": "https://26hrwgorfcmh.windows-devs.top/AccessLog2/83_FHD/apache.m3u8",
+          "link": "https://26hrwgorfcmh.windows-devs.top/AccessLog2/83_FHD/apache.m3u8?|Referer=https://26hrwgorfcmh.windows-devs.top/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://26hrwgorfcmh.windows-devs.top/"
+          }
+        },
+        {
+          "name": "HD QUALITY",
+          "type": "hls",
+          "url": "https://26hrwgorfcmh.windows-devs.top/AccessLog2/108085_HD/apache.m3u8",
+          "link": "https://26hrwgorfcmh.windows-devs.top/AccessLog2/108085_HD/apache.m3u8?|referer=https://26hrwgorfcmh.windows-devs.top/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://26hrwgorfcmh.windows-devs.top/"
+          }
+        },
+        {
+          "name": "Cricfy WWE",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/wwe/2026-11-20",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "CricFy FHD",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://trend8.st/event/m-wwe-friday-night-smackdown-1121",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2203,
+      "order_index": 6,
+      "title": "Monday Night Raw",
+      "category": "Boxing",
+      "tournament": "Monday Night Raw",
+      "poster": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrJX8VFtwdb0AWq64lhOVYbkKvFoiSROOixJeEU73uUDp25NzGuWNynMuEWC6ezIWj4Jyp3VN3rrQDufJZuMQ67Sys-xPilS4jvh-Ujk3-B0shI1O-RdhuZB9cRJ7oeMbIZZe9wih7krgECdqYLQiYYFX3N6pFL6QX3XsKc4ihKOyZ8mH0_QZcL0uqirs/s1600/1000025200.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "01/12/2026",
+      "time": "00:00:00",
+      "start_utc": "2026-12-01T00:00:00+00:00",
+      "start_bdt": "2026-12-01 06:00 AM BDT",
+      "start_ist": "2026-12-01 05:30 AM IST",
+      "teamA": {
+        "name": "WWE Monday Night RAW",
+        "logo": "https://iili.io/C3vwB0Q.png"
+      },
+      "teamB": {
+        "name": "WWE Monday Night RAW",
+        "logo": "https://iili.io/C3vwB0Q.png"
+      },
+      "priority": -1,
+      "total_streams": 5,
+      "streams": [
+        {
+          "name": "CricFy HD",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/58315/load-playlist.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/58315/load-playlist.m3u8?|referer=https://gooz.aapmains.net/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "https://gooz.aapmains.net/"
+          }
+        },
+        {
+          "name": "HD Server",
+          "type": "hls",
+          "url": "https://ubuntu.fromthyheart.site/dailymotion/live/playlist/1.m3u8",
+          "link": "https://ubuntu.fromthyheart.site/dailymotion/live/playlist/1.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "RAW LIve",
+          "type": "hls",
+          "url": "https://admin2.formaturamaxi.com.br/wwe.m3u8",
+          "link": "https://admin2.formaturamaxi.com.br/wwe.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "RAW Stream",
+          "type": "hls",
+          "url": "https://admin.formaturamaxi.com.br/wwe.m3u8",
+          "link": "https://admin.formaturamaxi.com.br/wwe.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.41/hls/CCCCAA.m3u8",
+          "link": "http://193.47.62.41/hls/CCCCAA.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2237,
+      "order_index": 7,
+      "title": "WWE NXT",
+      "category": "Boxing",
+      "tournament": "WWE NXT",
+      "poster": "https://www.wwe.com/f/styles/wwe_show_logo_sm/public/all/2024/10/NXTonCW--0f06792893241464479338f55596a5bf.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "02/12/2026",
+      "time": "00:00:00",
+      "start_utc": "2026-12-02T00:00:00+00:00",
+      "start_bdt": "2026-12-02 06:00 AM BDT",
+      "start_ist": "2026-12-02 05:30 AM IST",
+      "teamA": {
+        "name": "NXT",
+        "logo": "https://www.wwe.com/f/styles/wwe_show_logo_sm/public/all/2024/10/NXTonCW--0f06792893241464479338f55596a5bf.png"
+      },
+      "teamB": {
+        "name": "NXT",
+        "logo": "https://www.wwe.com/f/styles/wwe_show_logo_sm/public/all/2024/10/NXTonCW--0f06792893241464479338f55596a5bf.png"
+      },
+      "priority": -1,
+      "total_streams": 4,
+      "streams": [
+        {
+          "name": "NXT FHD",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/wwe/2026-11-10",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "Cricfy HD",
+          "type": "hls",
+          "url": "https://ubuntu.fromthyheart.site/dailymotion/live/playlist/4.m3u8",
+          "link": "https://ubuntu.fromthyheart.site/dailymotion/live/playlist/4.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "CRFY Stream",
+          "type": "hls",
+          "url": "https://jellyfin.fromthyheart.site/dailymotion/live/playlist/5.m3u8",
+          "link": "https://jellyfin.fromthyheart.site/dailymotion/live/playlist/5.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.55/hls/FIOOOQQ.m3u8",
+          "link": "http://193.47.62.55/hls/FIOOOQQ.m3u8?|Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "http://www.fawanews.sc/",
+            "Origin": "http://www.fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2265,
+      "order_index": 8,
+      "title": "AEW Dynamite",
+      "category": "Boxing",
+      "tournament": "AEW Dynamite",
+      "poster": "https://static.wixstatic.com/media/815952_5964d86934774f97a1a12b104c8b0a7a~mv2.png/v1/fill/w_146,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aewlogo24b.png",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "03/12/2026",
+      "time": "01:00:00",
+      "start_utc": "2026-12-03T01:00:00+00:00",
+      "start_bdt": "2026-12-03 07:00 AM BDT",
+      "start_ist": "2026-12-03 06:30 AM IST",
+      "teamA": {
+        "name": "AEW",
+        "logo": "https://static.wixstatic.com/media/815952_5964d86934774f97a1a12b104c8b0a7a~mv2.png/v1/fill/w_146,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aewlogo24b.png"
+      },
+      "teamB": {
+        "name": "AEW",
+        "logo": "https://static.wixstatic.com/media/815952_5964d86934774f97a1a12b104c8b0a7a~mv2.png/v1/fill/w_146,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/aewlogo24b.png"
+      },
+      "priority": -1,
+      "total_streams": 4,
+      "streams": [
+        {
+          "name": "HD Server",
+          "type": "hls",
+          "url": "https://chatgpt.hereisman.net/playlist/60709/load-playlist-multi?&.m3u8",
+          "link": "https://chatgpt.hereisman.net/playlist/60709/load-playlist-multi?&.m3u8|Referer=https://gooz.aapmains.net",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://gooz.aapmains.net"
+          }
+        },
+        {
+          "name": "AEW FHD",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/aew/2026-11-26",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "AEW SD",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/aew/2026-11-26_540p",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        },
+        {
+          "name": "CRFY Stream",
+          "type": "hls",
+          "url": "https://admin2.formaturamaxi.com.br/aew.m3u8",
+          "link": "https://admin2.formaturamaxi.com.br/aew.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 2569,
+      "order_index": 11,
+      "title": "WBBL | Womens Big Bash League",
+      "category": "Cricket",
+      "tournament": "WBBL | Womens Big Bash League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/11163/image",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "10:10:00",
+      "start_utc": "2026-11-27T10:10:00+00:00",
+      "start_bdt": "2026-11-27 04:10 PM BDT",
+      "start_ist": "2026-11-27 03:40 PM IST",
+      "teamA": {
+        "name": "WBBL",
+        "logo": "https://img.sofascore.com/api/v1/unique-tournament/11163/image"
+      },
+      "teamB": {
+        "name": "WBBL",
+        "logo": "https://img.sofascore.com/api/v1/unique-tournament/11163/image"
+      },
+      "priority": -1,
+      "total_streams": 5,
+      "streams": [
+        {
+          "name": "WILLOW FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/teiohs2xmz/out/v1/3369f17367944191984b7d95012548e8/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/teiohs2xmz/out/v1/3369f17367944191984b7d95012548e8/cenc.mpd",
+          "scheme": 0,
+          "api": "41901192b980eddd911c8cd7e5c516df:fabf22ee583ee08d1638dc18578d5174",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "41901192b980eddd911c8cd7e5c516df",
+            "key": "fabf22ee583ee08d1638dc18578d5174",
+            "raw": "41901192b980eddd911c8cd7e5c516df:fabf22ee583ee08d1638dc18578d5174"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/teiohs2xmz/out/v1/3369f17367944191984b7d95012548e8/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/teiohs2xmz/out/v1/3369f17367944191984b7d95012548e8/cenc.mpd",
+          "scheme": 0,
+          "api": "41901192b980eddd911c8cd7e5c516df:fabf22ee583ee08d1638dc18578d5174",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "41901192b980eddd911c8cd7e5c516df",
+            "key": "fabf22ee583ee08d1638dc18578d5174",
+            "raw": "41901192b980eddd911c8cd7e5c516df:fabf22ee583ee08d1638dc18578d5174"
+          }
+        },
+        {
+          "name": "TAPMAD FHD",
+          "type": "hls",
+          "url": "https://tencent-cdn.tapmad.com/v1/01a14a80166b1ea557841e1612cf55/01a14a8047211ea557841e1612cf58/main.m3u8",
+          "link": "https://tencent-cdn.tapmad.com/v1/01a14a80166b1ea557841e1612cf55/01a14a8047211ea557841e1612cf58/main.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "WILLOW HD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/0bftapixow/out/v1/a435ed7a00f947deb4369b46d8f2fb70/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/0bftapixow/out/v1/a435ed7a00f947deb4369b46d8f2fb70/cenc.mpd",
+          "scheme": 0,
+          "api": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "290e09c837da78d5cd961978d390515c",
+            "key": "b748836c71e6a4ca68ef5b5652db6247",
+            "raw": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.41/hls/R444.m3u8",
+          "link": "http://193.47.62.41/hls/R444.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Referer": "http://www.fawanews.sc/",
+            "Origin": "http://www.fawanews.sc"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2889,
+      "order_index": 13,
+      "title": "AUS vs ENG",
+      "category": "Cricket",
+      "tournament": "One Day International",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/11190/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "08:15:00",
+      "start_utc": "2026-11-27T08:15:00+00:00",
+      "start_bdt": "2026-11-27 02:15 PM BDT",
+      "start_ist": "2026-11-27 01:45 PM IST",
+      "teamA": {
+        "name": "AUS",
+        "logo": "https://img.sofascore.com/api/v1/team/187746/image"
+      },
+      "teamB": {
+        "name": "ENG",
+        "logo": "https://img.sofascore.com/api/v1/team/187757/image"
+      },
+      "priority": -1,
+      "total_streams": 10,
+      "streams": [
+        {
+          "name": "WILLOW FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/1m5p4laylw/out/v1/d06dee18492d4734b4a35dfa108e3a33/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/1m5p4laylw/out/v1/d06dee18492d4734b4a35dfa108e3a33/cenc.mpd",
+          "scheme": 0,
+          "api": "ae2b2cc0d4a4ca729178fa33c76c333f:a2cef8a0f497874cedd1c23d13d7cf63",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "ae2b2cc0d4a4ca729178fa33c76c333f",
+            "key": "a2cef8a0f497874cedd1c23d13d7cf63",
+            "raw": "ae2b2cc0d4a4ca729178fa33c76c333f:a2cef8a0f497874cedd1c23d13d7cf63"
+          }
+        },
+        {
+          "name": "TNT SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "69a5aa835a061ce64a630d1046727e40",
+            "key": "d02feac8a999bd06bf4059bf33411749",
+            "raw": "69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749"
+          }
+        },
+        {
+          "name": "FANCODE FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/b3b3fkmrbl/out/v1/1084d5c9a97a4c5b9f9554c88f486646/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "82dfca238e8c4b430a3269db71965db9",
+            "key": "a00b28caf4ac628e77a553d440c0ddca",
+            "raw": "82dfca238e8c4b430a3269db71965db9:a00b28caf4ac628e77a553d440c0ddca"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/1m5p4laylw/out/v1/d06dee18492d4734b4a35dfa108e3a33/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/1m5p4laylw/out/v1/d06dee18492d4734b4a35dfa108e3a33/cenc.mpd",
+          "scheme": 0,
+          "api": "ae2b2cc0d4a4ca729178fa33c76c333f:a2cef8a0f497874cedd1c23d13d7cf63",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "ae2b2cc0d4a4ca729178fa33c76c333f",
+            "key": "a2cef8a0f497874cedd1c23d13d7cf63",
+            "raw": "ae2b2cc0d4a4ca729178fa33c76c333f:a2cef8a0f497874cedd1c23d13d7cf63"
+          }
+        },
+        {
+          "name": "EUROSPORT FHD",
+          "type": "dash",
+          "url": "https://wbd.skandha.tv/EuroSport_HD/EuroSport_HD.isml/.mpd",
+          "link": "https://wbd.skandha.tv/EuroSport_HD/EuroSport_HD.isml/.mpd",
+          "scheme": 0,
+          "api": "12ed56d780abcfebcd23aa27e4ac5015:6784567890abcfebcd23aa27e4ac2814",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "12ed56d780abcfebcd23aa27e4ac5015",
+            "key": "6784567890abcfebcd23aa27e4ac2814",
+            "raw": "12ed56d780abcfebcd23aa27e4ac5015:6784567890abcfebcd23aa27e4ac2814"
+          }
+        },
+        {
+          "name": "TAPMAD FHD",
+          "type": "hls",
+          "url": "https://tencent-cdn.tapmad.com/v1/01a14a9fb90c15fc60e91e1786b061/01a14a9feb881ea540a81c2b41b75e/main.m3u8",
+          "link": "https://tencent-cdn.tapmad.com/v1/01a14a9fb90c15fc60e91e1786b061/01a14a9feb881ea540a81c2b41b75e/main.m3u8?|Referer=https://tapmad.com/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://tapmad.com/"
+          }
+        },
+        {
+          "name": "TEN SPORTS HD",
+          "type": "hls",
+          "url": "https://live.msnetworks.net/ten-sports/master.m3u8",
+          "link": "https://live.msnetworks.net/ten-sports/master.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "WILLOW HD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/0bftapixow/out/v1/a435ed7a00f947deb4369b46d8f2fb70/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/0bftapixow/out/v1/a435ed7a00f947deb4369b46d8f2fb70/cenc.mpd",
+          "scheme": 0,
+          "api": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "290e09c837da78d5cd961978d390515c",
+            "key": "b748836c71e6a4ca68ef5b5652db6247",
+            "raw": "290e09c837da78d5cd961978d390515c:b748836c71e6a4ca68ef5b5652db6247"
+          }
+        },
+        {
+          "name": "FANCODE (IND)",
+          "type": "hls",
+          "url": "https://in-mc-flive.fancode.com/mumbai/4250640_english_hls_531bf4661e7063_1ta-di_h264/1080p.m3u8?hdntl=Expires=1794628546~_GO=Generated~acl=/mumbai/4250640_english_hls_531bf4661e7063_1ta-di_h264/*~SessionID=330387595_fc-web_e17f533d-0cb8-4f~Signature=AbO9BjhOYLd1GmMfhOhHHklnPOfhTKBOpq8RY94K5cvEs32zsfobefwN_2FtsFC-VmxLp67-63kmnIeMKq08MmKZpgcO",
+          "link": "https://in-mc-flive.fancode.com/mumbai/4250640_english_hls_531bf4661e7063_1ta-di_h264/1080p.m3u8?hdntl=Expires=1794628546~_GO=Generated~acl=/mumbai/4250640_english_hls_531bf4661e7063_1ta-di_h264/*~SessionID=330387595_fc-web_e17f533d-0cb8-4f~Signature=AbO9BjhOYLd1GmMfhOhHHklnPOfhTKBOpq8RY94K5cvEs32zsfobefwN_2FtsFC-VmxLp67-63kmnIeMKq08MmKZpgcO",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.41/hls/vvvve.m3u8",
+          "link": "http://193.47.62.41/hls/vvvve.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Referer": "http://www.fawanews.sc/",
+            "Origin": "http://www.fawanews.sc"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2931,
+      "order_index": 14,
+      "title": "SA vs BAN",
+      "category": "Cricket",
+      "tournament": "ICC World Test Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/18833/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "01/12/2026",
+      "time": "11:30:00",
+      "start_utc": "2026-12-01T11:30:00+00:00",
+      "start_bdt": "2026-12-01 05:30 PM BDT",
+      "start_ist": "2026-12-01 05:00 PM IST",
+      "teamA": {
+        "name": "SA",
+        "logo": "https://img.sofascore.com/api/v1/team/187747/image"
+      },
+      "teamB": {
+        "name": "BAN",
+        "logo": "https://img.sofascore.com/api/v1/team/187744/image"
+      },
+      "priority": -1,
+      "total_streams": 7,
+      "streams": [
+        {
+          "name": "WILLOW FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/23pcq587cm/out/v1/ee8c4d2ac4094688a867f0d1a76aef2b/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/23pcq587cm/out/v1/ee8c4d2ac4094688a867f0d1a76aef2b/cenc.mpd",
+          "scheme": 0,
+          "api": "1b2d04c3583cb8cd35fdf091453a9927:9584b37353992c00415eac1ae42cb3df",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "1b2d04c3583cb8cd35fdf091453a9927",
+            "key": "9584b37353992c00415eac1ae42cb3df",
+            "raw": "1b2d04c3583cb8cd35fdf091453a9927:9584b37353992c00415eac1ae42cb3df"
+          }
+        },
+        {
+          "name": "FANCODE FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "1994b1df7dfd2e8a8d7b9bf3fb900285",
+            "key": "22a1444b3da18e139191665b3d652835",
+            "raw": "1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/23pcq587cm/out/v1/ee8c4d2ac4094688a867f0d1a76aef2b/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/23pcq587cm/out/v1/ee8c4d2ac4094688a867f0d1a76aef2b/cenc.mpd",
+          "scheme": 0,
+          "api": "1b2d04c3583cb8cd35fdf091453a9927:9584b37353992c00415eac1ae42cb3df",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "1b2d04c3583cb8cd35fdf091453a9927",
+            "key": "9584b37353992c00415eac1ae42cb3df",
+            "raw": "1b2d04c3583cb8cd35fdf091453a9927:9584b37353992c00415eac1ae42cb3df"
+          }
+        },
+        {
+          "name": "FANCODE SD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash-sd/enc/eayjamsonn/out/v1/6c25cddab58043a6ace0ac64d97983f0/cenc-sd.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash-sd/enc/eayjamsonn/out/v1/6c25cddab58043a6ace0ac64d97983f0/cenc-sd.mpd",
+          "scheme": 0,
+          "api": "5318e462b9e0677487cb87837f0bbdb1:4fa0fb973b95738306005f2e8591bf8e",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "5318e462b9e0677487cb87837f0bbdb1",
+            "key": "4fa0fb973b95738306005f2e8591bf8e",
+            "raw": "5318e462b9e0677487cb87837f0bbdb1:4fa0fb973b95738306005f2e8591bf8e"
+          }
+        },
+        {
+          "name": "SK CRICKET FHD",
+          "type": "hls",
+          "url": "https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https",
+          "link": "https://bl.rutube.ru/livestream/7c13a51576b9ff2601f08f5d57dd5169/index.m3u8?s=uiXES2ePt7xTpQnbJxn7Dg&e=2074684474&scheme=https|user-agent=Mozilla",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "user-agent": "Mozilla"
+          }
+        },
+        {
+          "name": "T SPORTS HD",
+          "type": "hls",
+          "url": "https://tvsen5.aynaott.com/TnMn5kZz8aLmjklkk/index.m3u8",
+          "link": "https://tvsen5.aynaott.com/TnMn5kZz8aLmjklkk/index.m3u8",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.41/hls/JYYY.m3u8",
+          "link": "http://193.47.62.41/hls/JYYY.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3283,
+      "order_index": 76,
+      "title": "I. Adesanya vs S. Magomedov",
+      "category": "Mixed Martial Arts",
+      "tournament": "UFC",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/19906/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "05/12/2026",
+      "time": "16:00:00",
+      "start_utc": "2026-12-05T16:00:00+00:00",
+      "start_bdt": "2026-12-05 10:00 PM BDT",
+      "start_ist": "2026-12-05 09:30 PM IST",
+      "teamA": {
+        "name": "I. Adesanya",
+        "logo": "https://img.sofascore.com/api/v1/team/470041/image"
+      },
+      "teamB": {
+        "name": "S. Magomedov",
+        "logo": "https://img.sofascore.com/api/v1/team/494444/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3353,
+      "order_index": 146,
+      "title": "PAK vs BAN",
+      "category": "Cricket",
+      "tournament": "Men's Asia Cup Rising Stars 2026",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2rCtrI68Agu71aIWID9YxzlqXN-3c88k4cwPQQhwEA&s=10",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "10:00:00",
+      "start_utc": "2026-11-27T10:00:00+00:00",
+      "start_bdt": "2026-11-27 04:00 PM BDT",
+      "start_ist": "2026-11-27 03:30 PM IST",
+      "teamA": {
+        "name": "PAK",
+        "logo": "https://img.sofascore.com/api/v1/team/187754/image"
+      },
+      "teamB": {
+        "name": "BAN",
+        "logo": "https://img.sofascore.com/api/v1/team/187744/image"
+      },
+      "priority": -1,
+      "total_streams": 4,
+      "streams": [
+        {
+          "name": "WILLOW FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/1zdpsgfa6p/out/v1/0be3672943164ddc9df8372d522c3842/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/1zdpsgfa6p/out/v1/0be3672943164ddc9df8372d522c3842/cenc.mpd",
+          "scheme": 0,
+          "api": "ac685b471a4e1d6c4be3fe7429595d9d:db72f4347277225954d7170f0ec6992f",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "ac685b471a4e1d6c4be3fe7429595d9d",
+            "key": "db72f4347277225954d7170f0ec6992f",
+            "raw": "ac685b471a4e1d6c4be3fe7429595d9d:db72f4347277225954d7170f0ec6992f"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/1zdpsgfa6p/out/v1/0be3672943164ddc9df8372d522c3842/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/1zdpsgfa6p/out/v1/0be3672943164ddc9df8372d522c3842/cenc.mpd",
+          "scheme": 0,
+          "api": "ac685b471a4e1d6c4be3fe7429595d9d:db72f4347277225954d7170f0ec6992f",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "ac685b471a4e1d6c4be3fe7429595d9d",
+            "key": "db72f4347277225954d7170f0ec6992f",
+            "raw": "ac685b471a4e1d6c4be3fe7429595d9d:db72f4347277225954d7170f0ec6992f"
+          }
+        },
+        {
+          "name": "SonyLiv (Asia)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2120299/Criclive2411/ENG/std_lrh-800300010.m3u8?hdnea=exp=1795555554~acl=/*~id=76403202165520569836578998371927~hmac=17acd14f3505e58b7359fb6fb8b258a8bbe5517eba4abdb627980f1f6b8032ee",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2120299/Criclive2411/ENG/std_lrh-800300010.m3u8?hdnea=exp=1795555554~acl=/*~id=76403202165520569836578998371927~hmac=17acd14f3505e58b7359fb6fb8b258a8bbe5517eba4abdb627980f1f6b8032ee",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "HD QUALITY",
+          "type": "hls",
+          "url": "https://dai.google.com/linear/hls/event/YEM-gkNKSaaG0VB4X6KiMg/master.m3u8",
+          "link": "https://dai.google.com/linear/hls/event/YEM-gkNKSaaG0VB4X6KiMg/master.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3382,
+      "order_index": 175,
+      "title": "Honduras U17 vs Japan U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "13:00:00",
+      "start_utc": "2026-11-27T13:00:00+00:00",
+      "start_bdt": "2026-11-27 07:00 PM BDT",
+      "start_ist": "2026-11-27 06:30 PM IST",
+      "teamA": {
+        "name": "Honduras U17",
+        "logo": "https://img.sofascore.com/api/v1/team/7764/image"
+      },
+      "teamB": {
+        "name": "Japan U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22618/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3387,
+      "order_index": 180,
+      "title": "Colombia U17 vs Serbia U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "13:00:00",
+      "start_utc": "2026-11-27T13:00:00+00:00",
+      "start_bdt": "2026-11-27 07:00 PM BDT",
+      "start_ist": "2026-11-27 06:30 PM IST",
+      "teamA": {
+        "name": "Colombia U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22592/image"
+      },
+      "teamB": {
+        "name": "Serbia U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22478/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3401,
+      "order_index": 194,
+      "title": "Al-Kholood vs Al-Khaleej",
+      "category": "Football",
+      "tournament": "Saudi Pro League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/955/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "12:15:00",
+      "start_utc": "2026-11-27T12:15:00+00:00",
+      "start_bdt": "2026-11-27 06:15 PM BDT",
+      "start_ist": "2026-11-27 05:45 PM IST",
+      "teamA": {
+        "name": "Al-Kholood",
+        "logo": "https://img.sofascore.com/api/v1/team/269199/image"
+      },
+      "teamB": {
+        "name": "Al-Khaleej",
+        "logo": "https://img.sofascore.com/api/v1/team/167228/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3410,
+      "order_index": 203,
+      "title": "Sunderland vs Jagiellonia",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Sunderland",
+        "logo": "https://img.sofascore.com/api/v1/team/41/image"
+      },
+      "teamB": {
+        "name": "Jagiellonia",
+        "logo": "https://img.sofascore.com/api/v1/team/7691/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3411,
+      "order_index": 204,
+      "title": "Hajduk vs St. Truidense",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Hajduk",
+        "logo": "https://img.sofascore.com/api/v1/team/2036/image"
+      },
+      "teamB": {
+        "name": "St. Truidense",
+        "logo": "https://img.sofascore.com/api/v1/team/2895/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3412,
+      "order_index": 205,
+      "title": "Ferencváros vs Celje",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Ferencváros",
+        "logo": "https://img.sofascore.com/api/v1/team/1925/image"
+      },
+      "teamB": {
+        "name": "Celje",
+        "logo": "https://img.sofascore.com/api/v1/team/2413/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3413,
+      "order_index": 206,
+      "title": "Juventus vs Omonia",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Juventus",
+        "logo": "https://img.sofascore.com/api/v1/team/2687/image"
+      },
+      "teamB": {
+        "name": "Omonia",
+        "logo": "https://img.sofascore.com/api/v1/team/3395/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3415,
+      "order_index": 208,
+      "title": "Torreense vs Celtic",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Torreense",
+        "logo": "https://img.sofascore.com/api/v1/team/25787/image"
+      },
+      "teamB": {
+        "name": "Celtic",
+        "logo": "https://img.sofascore.com/api/v1/team/2352/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3417,
+      "order_index": 210,
+      "title": "Sparta Praha vs AZ",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Sparta Praha",
+        "logo": "https://img.sofascore.com/api/v1/team/2218/image"
+      },
+      "teamB": {
+        "name": "AZ",
+        "logo": "https://img.sofascore.com/api/v1/team/2950/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3423,
+      "order_index": 216,
+      "title": "CSKA Sofia vs Trabzonspor",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "CSKA Sofia",
+        "logo": "https://img.sofascore.com/api/v1/team/3275/image"
+      },
+      "teamB": {
+        "name": "Trabzonspor",
+        "logo": "https://img.sofascore.com/api/v1/team/3051/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3424,
+      "order_index": 217,
+      "title": "Crystal Palace vs Real Sociedad",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Crystal Palace",
+        "logo": "https://img.sofascore.com/api/v1/team/7/image"
+      },
+      "teamB": {
+        "name": "Real Sociedad",
+        "logo": "https://img.sofascore.com/api/v1/team/2824/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3425,
+      "order_index": 218,
+      "title": "Lyon vs Lillestrøm",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Lyon",
+        "logo": "https://img.sofascore.com/api/v1/team/1649/image"
+      },
+      "teamB": {
+        "name": "Lillestrøm",
+        "logo": "https://img.sofascore.com/api/v1/team/664/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3426,
+      "order_index": 219,
+      "title": "NEC vs Rennes",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "NEC",
+        "logo": "https://img.sofascore.com/api/v1/team/2962/image"
+      },
+      "teamB": {
+        "name": "Rennes",
+        "logo": "https://img.sofascore.com/api/v1/team/1658/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3430,
+      "order_index": 223,
+      "title": "Inter vs København",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Inter",
+        "logo": "https://img.sofascore.com/api/v1/team/37946/image"
+      },
+      "teamB": {
+        "name": "København",
+        "logo": "https://img.sofascore.com/api/v1/team/1284/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3432,
+      "order_index": 225,
+      "title": "Braga vs KuPS",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Braga",
+        "logo": "https://img.sofascore.com/api/v1/team/2999/image"
+      },
+      "teamB": {
+        "name": "KuPS",
+        "logo": "https://img.sofascore.com/api/v1/team/2244/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3434,
+      "order_index": 227,
+      "title": "Freiburg vs Twente",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Freiburg",
+        "logo": "https://img.sofascore.com/api/v1/team/2538/image"
+      },
+      "teamB": {
+        "name": "Twente",
+        "logo": "https://img.sofascore.com/api/v1/team/2955/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3435,
+      "order_index": 228,
+      "title": "Nordsjælland vs Panathinaikos",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Nordsjælland",
+        "logo": "https://img.sofascore.com/api/v1/team/1292/image"
+      },
+      "teamB": {
+        "name": "Panathinaikos",
+        "logo": "https://img.sofascore.com/api/v1/team/3248/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3436,
+      "order_index": 229,
+      "title": "OFI vs Anderlecht",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "OFI",
+        "logo": "https://img.sofascore.com/api/v1/team/3241/image"
+      },
+      "teamB": {
+        "name": "Anderlecht",
+        "logo": "https://img.sofascore.com/api/v1/team/2900/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3438,
+      "order_index": 231,
+      "title": "Hoffenheim vs Sturm",
+      "category": "Football",
+      "tournament": "UEFA Europa League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/679/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Hoffenheim",
+        "logo": "https://img.sofascore.com/api/v1/team/2569/image"
+      },
+      "teamB": {
+        "name": "Sturm",
+        "logo": "https://img.sofascore.com/api/v1/team/2051/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3442,
+      "order_index": 235,
+      "title": "Borac vs Atalanta",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Borac",
+        "logo": "https://img.sofascore.com/api/v1/team/5235/image"
+      },
+      "teamB": {
+        "name": "Atalanta",
+        "logo": "https://img.sofascore.com/api/v1/team/2686/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3445,
+      "order_index": 238,
+      "title": "Gent vs Crvena zvezda",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "20:00:00",
+      "start_utc": "2026-11-26T20:00:00+00:00",
+      "start_bdt": "2026-11-27 02:00 AM BDT",
+      "start_ist": "2026-11-27 01:30 AM IST",
+      "teamA": {
+        "name": "Gent",
+        "logo": "https://img.sofascore.com/api/v1/team/2903/image"
+      },
+      "teamB": {
+        "name": "Crvena zvezda",
+        "logo": "https://img.sofascore.com/api/v1/team/5149/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Link 1",
+          "type": "hls",
+          "url": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "link": "http://cricfy-tv.net/promo/cricfy-promo.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3446,
+      "order_index": 239,
+      "title": "Cowboys vs Eagles",
+      "category": "American football",
+      "tournament": "NFL",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/9464/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "21:30:00",
+      "start_utc": "2026-11-26T21:30:00+00:00",
+      "start_bdt": "2026-11-27 03:30 AM BDT",
+      "start_ist": "2026-11-27 03:00 AM IST",
+      "teamA": {
+        "name": "Cowboys",
+        "logo": "https://img.sofascore.com/api/v1/team/4392/image"
+      },
+      "teamB": {
+        "name": "Eagles",
+        "logo": "https://img.sofascore.com/api/v1/team/4428/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "NFL",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/nfl/2026-11-26/phi-dal",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3447,
+      "order_index": 240,
+      "title": "Bills vs Chiefs",
+      "category": "American football",
+      "tournament": "NFL",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/9464/image/dark",
+      "status": "UPCOMING",
+      "is_live": false,
+      "date": "27/11/2026",
+      "time": "01:20:00",
+      "start_utc": "2026-11-27T01:20:00+00:00",
+      "start_bdt": "2026-11-27 07:20 AM BDT",
+      "start_ist": "2026-11-27 06:50 AM IST",
+      "teamA": {
+        "name": "Bills",
+        "logo": "https://img.sofascore.com/api/v1/team/4414/image"
+      },
+      "teamB": {
+        "name": "Chiefs",
+        "logo": "https://img.sofascore.com/api/v1/team/4422/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "NFL",
+          "type": "embed",
+          "url": "",
+          "link": "",
+          "scheme": 0,
+          "api": "",
+          "tokenApi": {
+            "url": "",
+            "api": "https://taifood-blog.asia/embed/nfl/2026-11-26/kc-buf",
+            "type": "embed",
+            "link_key": "playback_url",
+            "default_string": "N8x7Y%m+6n",
+            "request_type": "get",
+            "request_body_type": "text",
+            "ip_api": "https://api.ipify.org/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3352,
+      "order_index": 145,
+      "title": "India A vs sri Lanka A",
+      "category": "Cricket",
+      "tournament": "Men's Asia Cup Rising Stars 2026",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn2rCtrI68Agu71aIWID9YxzlqXN-3c88k4cwPQQhwEA&s=10",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "10:00:00",
+      "start_utc": "2026-11-26T10:00:00+00:00",
+      "start_bdt": "2026-11-26 04:00 PM BDT",
+      "start_ist": "2026-11-26 03:30 PM IST",
+      "teamA": {
+        "name": "India A",
+        "logo": "https://img.sofascore.com/api/v1/team/4828/image"
+      },
+      "teamB": {
+        "name": "sri Lanka A",
+        "logo": "https://img.sofascore.com/api/v1/team/23487/image"
+      },
+      "priority": -1,
+      "total_streams": 9,
+      "streams": [
+        {
+          "name": "WILLOW FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/hfkzscud13/out/v1/c61a8389b4b34857a53bc23cd2d139d8/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/iad-nitro/live/clients/dash/enc/hfkzscud13/out/v1/c61a8389b4b34857a53bc23cd2d139d8/cenc.mpd",
+          "scheme": 0,
+          "api": "531497de47944ade5410fe5852905698:574547fdae92793f4630b65dade01761",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "531497de47944ade5410fe5852905698",
+            "key": "574547fdae92793f4630b65dade01761",
+            "raw": "531497de47944ade5410fe5852905698:574547fdae92793f4630b65dade01761"
+          }
+        },
+        {
+          "name": "STARZPLAY FHD",
+          "type": "dash",
+          "url": "https://d1ifzl5cnhi7bu.cloudfront.net/out/v1/45ba30e075ad455a8767d3f33e67ea3d/index.mpd",
+          "link": "https://d1ifzl5cnhi7bu.cloudfront.net/out/v1/45ba30e075ad455a8767d3f33e67ea3d/index.mpd",
+          "scheme": 0,
+          "api": "0ae4f162eec3e6f2b580a5bf0f4a64d4:03483335db81cba5bbcf51b6d31196d9",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "0ae4f162eec3e6f2b580a5bf0f4a64d4",
+            "key": "03483335db81cba5bbcf51b6d31196d9",
+            "raw": "0ae4f162eec3e6f2b580a5bf0f4a64d4:03483335db81cba5bbcf51b6d31196d9"
+          }
+        },
+        {
+          "name": "WILLOW ALT",
+          "type": "dash",
+          "url": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/hfkzscud13/out/v1/c61a8389b4b34857a53bc23cd2d139d8/cenc.mpd",
+          "link": "https://abfjk4haaaaaaaamkitc5445rybm6.bia-cf.live.pv-cdn.net/iad-nitro/live/clients/dash/enc/hfkzscud13/out/v1/c61a8389b4b34857a53bc23cd2d139d8/cenc.mpd",
+          "scheme": 0,
+          "api": "531497de47944ade5410fe5852905698:574547fdae92793f4630b65dade01761",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "531497de47944ade5410fe5852905698",
+            "key": "574547fdae92793f4630b65dade01761",
+            "raw": "531497de47944ade5410fe5852905698:574547fdae92793f4630b65dade01761"
+          }
+        },
+        {
+          "name": "SonyLiv (ENG)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119931/cricodi_2411/ENG/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119931/cricodi_2411/ENG/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (HIN)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119921/cricodi_2411/HIN/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119921/cricodi_2411/HIN/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (TAM)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119951/cricodi_2411/TAM/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119951/cricodi_2411/TAM/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (TEL)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119941/cricodi_2411/TEL/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119941/cricodi_2411/TEL/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "SonyLiv (KAN)",
+          "type": "hls",
+          "url": "https://sonyeventsglobal.akamaized.net/hls/live/2119782/cricodi_2411/KAN/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "link": "https://sonyeventsglobal.akamaized.net/hls/live/2119782/cricodi_2411/KAN/std_lrh-800300010.m3u8?hdnea=exp=1795540931~acl=/*~id=42533442359826935436253248685876~hmac=87ea8943906f9a403a1ee7d1dd9ff17f83fd0eb43341967a8f9707fc56d22b8b",
+          "scheme": 0,
+          "api": ""
+        },
+        {
+          "name": "PTV SPORTS HD",
+          "type": "hls",
+          "url": "https://live.msnetworks.net/ptv-sports/master.m3u8",
+          "link": "https://live.msnetworks.net/ptv-sports/master.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3385,
+      "order_index": 178,
+      "title": "Tajikistan U17 vs Senegal U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "16:00:00",
+      "start_utc": "2026-11-26T16:00:00+00:00",
+      "start_bdt": "2026-11-26 10:00 PM BDT",
+      "start_ist": "2026-11-26 09:30 PM IST",
+      "teamA": {
+        "name": "Tajikistan U17",
+        "logo": "https://img.sofascore.com/api/v1/team/229664/image"
+      },
+      "teamB": {
+        "name": "Senegal U17",
+        "logo": "https://img.sofascore.com/api/v1/team/323076/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.55/hls/QYYYQ.m3u8",
+          "link": "http://193.47.62.55/hls/QYYYQ.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3386,
+      "order_index": 179,
+      "title": "Jamaica U17 vs Côte d'Ivoire U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "14:00:00",
+      "start_utc": "2026-11-26T14:00:00+00:00",
+      "start_bdt": "2026-11-26 08:00 PM BDT",
+      "start_ist": "2026-11-26 07:30 PM IST",
+      "teamA": {
+        "name": "Jamaica U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22617/image"
+      },
+      "teamB": {
+        "name": "Côte d'Ivoire U17",
+        "logo": "https://img.sofascore.com/api/v1/team/48857/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Cricfy HD",
+          "type": "hls",
+          "url": "https://live3979.zundrixmediapipeline.com/live/channel18.m3u8",
+          "link": "https://live3979.zundrixmediapipeline.com/live/channel18.m3u8?|Referer=https://xlz.domainkqt.cc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://xlz.domainkqt.cc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3390,
+      "order_index": 183,
+      "title": "Croatia U17 vs Cuba U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "16:00:00",
+      "start_utc": "2026-11-26T16:00:00+00:00",
+      "start_bdt": "2026-11-26 10:00 PM BDT",
+      "start_ist": "2026-11-26 09:30 PM IST",
+      "teamA": {
+        "name": "Croatia U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22594/image"
+      },
+      "teamB": {
+        "name": "Cuba U17",
+        "logo": "https://img.sofascore.com/api/v1/team/190704/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.50/hls/GTGTGTA.m3u8",
+          "link": "http://193.47.62.50/hls/GTGTGTA.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Referer": "http://www.fawanews.sc/",
+            "Origin": "http://www.fawanews.sc"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3392,
+      "order_index": 185,
+      "title": "Uzbekistan U17 vs Italy U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "14:00:00",
+      "start_utc": "2026-11-26T14:00:00+00:00",
+      "start_bdt": "2026-11-26 08:00 PM BDT",
+      "start_ist": "2026-11-26 07:30 PM IST",
+      "teamA": {
+        "name": "Uzbekistan U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22662/image"
+      },
+      "teamB": {
+        "name": "Italy U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22616/image"
+      },
+      "priority": -1,
+      "total_streams": 2,
+      "streams": [
+        {
+          "name": "D SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd",
+          "link": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash/enc/ud6bnhthpj/out/v1/2639a2f4480f4269953de466d5f46463/cenc.mpd",
+          "scheme": 0,
+          "api": "83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "83f81c4cc1443991543de4e22eea7586",
+            "key": "ddfd7ca653d6f35543d8edb3c688e20f",
+            "raw": "83f81c4cc1443991543de4e22eea7586:ddfd7ca653d6f35543d8edb3c688e20f"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "https://live3979.zundrixmediapipeline.com/live/channel12.m3u8",
+          "link": "https://live3979.zundrixmediapipeline.com/live/channel12.m3u8?|Referer=https://xlz.domainkqt.cc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://xlz.domainkqt.cc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3396,
+      "order_index": 189,
+      "title": "Morocco U17 vs Spain U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "15:00:00",
+      "start_utc": "2026-11-26T15:00:00+00:00",
+      "start_bdt": "2026-11-26 09:00 PM BDT",
+      "start_ist": "2026-11-26 08:30 PM IST",
+      "teamA": {
+        "name": "Morocco U17",
+        "logo": "https://img.sofascore.com/api/v1/team/48862/image"
+      },
+      "teamB": {
+        "name": "Spain U17",
+        "logo": "https://img.sofascore.com/api/v1/team/22479/image"
+      },
+      "priority": -1,
+      "total_streams": 3,
+      "streams": [
+        {
+          "name": "FOX SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/awxnrqkbo5/out/v1/716529a4091947b0877e6cb80dbd6ccb/cenc.mpd",
+          "scheme": 0,
+          "api": "09453ce820d65fbc675de3185f9e454c:98cff9600995fa381c76fdacf3c7edae",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "09453ce820d65fbc675de3185f9e454c",
+            "key": "98cff9600995fa381c76fdacf3c7edae",
+            "raw": "09453ce820d65fbc675de3185f9e454c:98cff9600995fa381c76fdacf3c7edae"
+          }
+        },
+        {
+          "name": "TSN SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/cscevwljkq/out/v1/972185041b244140860b7d56398e9aaf/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/cscevwljkq/out/v1/972185041b244140860b7d56398e9aaf/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "385ceb9714b75e0cef61254f80b31002:18dce92a2891fee68d21ede5173230f8",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "385ceb9714b75e0cef61254f80b31002",
+            "key": "18dce92a2891fee68d21ede5173230f8",
+            "raw": "385ceb9714b75e0cef61254f80b31002:18dce92a2891fee68d21ede5173230f8"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.55/hls/QYYYQ.m3u8",
+          "link": "http://193.47.62.55/hls/QYYYQ.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3397,
+      "order_index": 190,
+      "title": "China U17 vs Fiji U17",
+      "category": "Football",
+      "tournament": "U17 World Championship",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/279/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "15:00:00",
+      "start_utc": "2026-11-26T15:00:00+00:00",
+      "start_bdt": "2026-11-26 09:00 PM BDT",
+      "start_ist": "2026-11-26 08:30 PM IST",
+      "teamA": {
+        "name": "China U17",
+        "logo": "https://img.sofascore.com/api/v1/team/468402/image"
+      },
+      "teamB": {
+        "name": "Fiji U17",
+        "logo": "https://img.sofascore.com/api/v1/team/1096685/image"
+      },
+      "priority": -1,
+      "total_streams": 2,
+      "streams": [
+        {
+          "name": "Cricfy HD",
+          "type": "hls",
+          "url": "https://live3979.zundrixmediapipeline.com/live/channel17.m3u8",
+          "link": "https://live3979.zundrixmediapipeline.com/live/channel17.m3u8?|Referer=https://xlz.domainkqt.cc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://xlz.domainkqt.cc/"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.55/hls/QYYY.m3u8",
+          "link": "http://193.47.62.55/hls/QYYY.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3404,
+      "order_index": 197,
+      "title": "Al-Fateh vs Al-Riyadh",
+      "category": "Football",
+      "tournament": "Saudi Pro League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/955/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "14:25:00",
+      "start_utc": "2026-11-26T14:25:00+00:00",
+      "start_bdt": "2026-11-26 08:25 PM BDT",
+      "start_ist": "2026-11-26 07:55 PM IST",
+      "teamA": {
+        "name": "Al-Fateh",
+        "logo": "https://img.sofascore.com/api/v1/team/56023/image"
+      },
+      "teamB": {
+        "name": "Al-Riyadh",
+        "logo": "https://img.sofascore.com/api/v1/team/168088/image"
+      },
+      "priority": -1,
+      "total_streams": 1,
+      "streams": [
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.41/hls/QTTTAAA.m3u8",
+          "link": "http://193.47.62.41/hls/QTTTAAA.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&Referer=http://www.fawanews.sc/&Origin=http://www.fawanews.sc",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+            "Referer": "http://www.fawanews.sc/",
+            "Origin": "http://www.fawanews.sc"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3427,
+      "order_index": 220,
+      "title": "Kairat vs Mjällby",
+      "category": "Football",
+      "tournament": "UEFA Conference League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/17015/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "15:30:00",
+      "start_utc": "2026-11-26T15:30:00+00:00",
+      "start_bdt": "2026-11-26 09:30 PM BDT",
+      "start_ist": "2026-11-26 09:00 PM IST",
+      "teamA": {
+        "name": "Kairat",
+        "logo": "https://img.sofascore.com/api/v1/team/5172/image"
+      },
+      "teamB": {
+        "name": "Mjällby",
+        "logo": "https://img.sofascore.com/api/v1/team/1783/image"
+      },
+      "priority": -1,
+      "total_streams": 3,
+      "streams": [
+        {
+          "name": "TNT SPORTS FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+          "scheme": 0,
+          "api": "fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408",
+          "headers": {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          },
+          "drm": {
+            "type": "clearkey",
+            "keyId": "fa34fa8c90336dd528c7a23871cad1fe",
+            "key": "552a78d1aeb74f1650d68255c5749408",
+            "raw": "fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408"
+          }
+        },
+        {
+          "name": "SPORT 2 CZ FHD",
+          "type": "dash",
+          "url": "https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd",
+          "link": "https://dash2.antik.sk/stream/nvidia_sport2/playlist_cenc.mpd",
+          "scheme": 0,
+          "api": "11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "11223344556677889900112233445566",
+            "key": "4b80724d0ef86bcb2c21f7999d67739d",
+            "raw": "11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.55/hls/QYYYQQQ.m3u8",
+          "link": "http://193.47.62.55/hls/QYYYQQQ.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3449,
+      "order_index": 242,
+      "title": "Italia T10",
+      "category": "Cricket",
+      "tournament": "Italia T10",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBTK9sfDCFhv5T2jEH3nkh9cPngwVXMaQFV9uNCn66zg&s=10",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "11:00:00",
+      "start_utc": "2026-11-26T11:00:00+00:00",
+      "start_bdt": "2026-11-26 05:00 PM BDT",
+      "start_ist": "2026-11-26 04:30 PM IST",
+      "teamA": {
+        "name": "Italia T10",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBTK9sfDCFhv5T2jEH3nkh9cPngwVXMaQFV9uNCn66zg&s=10"
+      },
+      "teamB": {
+        "name": "Italia T10",
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBTK9sfDCFhv5T2jEH3nkh9cPngwVXMaQFV9uNCn66zg&s=10"
+      },
+      "priority": -1,
+      "total_streams": 2,
+      "streams": [
+        {
+          "name": "UNBEATEN FHD",
+          "type": "dash",
+          "url": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/igtio3ifkx/out/v1/3e305fd8d7eb4c489e80a71513206a7d/cenc.mpd",
+          "link": "https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/igtio3ifkx/out/v1/3e305fd8d7eb4c489e80a71513206a7d/cenc.mpd",
+          "scheme": 0,
+          "api": "5d6c647cd1b56550bd34349b68ec8c82:09f952780ba5b30bc222439aaa3ac09b",
+          "drm": {
+            "type": "clearkey",
+            "keyId": "5d6c647cd1b56550bd34349b68ec8c82",
+            "key": "09f952780ba5b30bc222439aaa3ac09b",
+            "raw": "5d6c647cd1b56550bd34349b68ec8c82:09f952780ba5b30bc222439aaa3ac09b"
+          }
+        },
+        {
+          "name": "SandBrix HD",
+          "type": "hls",
+          "url": "https://amssandbrix.sandbrix.live/sandbrix/streams/mk139q1Mi9bHznBA775016895861.m3u8",
+          "link": "https://amssandbrix.sandbrix.live/sandbrix/streams/mk139q1Mi9bHznBA775016895861.m3u8",
+          "scheme": 0,
+          "api": ""
+        }
+      ]
+    },
+    {
+      "id": 3450,
+      "order_index": 243,
+      "title": "Abha vs Al-Shabab",
+      "category": "Football",
+      "tournament": "Saudi Pro League",
+      "poster": "https://img.sofascore.com/api/v1/unique-tournament/955/image/dark",
+      "status": "COMPLETED",
+      "is_live": false,
+      "date": "26/11/2026",
+      "time": "15:05:00",
+      "start_utc": "2026-11-26T15:05:00+00:00",
+      "start_bdt": "2026-11-26 09:05 PM BDT",
+      "start_ist": "2026-11-26 08:35 PM IST",
+      "teamA": {
+        "name": "Abha",
+        "logo": "https://img.sofascore.com/api/v1/team/168090/image"
+      },
+      "teamB": {
+        "name": "Al-Shabab",
+        "logo": "https://img.sofascore.com/api/v1/team/34313/image"
+      },
+      "priority": -1,
+      "total_streams": 2,
+      "streams": [
+        {
+          "name": "Cricfy HD",
+          "type": "hls",
+          "url": "https://live3979.zundrixmediapipeline.com/live/channel8.m3u8",
+          "link": "https://live3979.zundrixmediapipeline.com/live/channel8.m3u8?|Referer=https://xlz.domainkqt.cc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "Referer": "https://xlz.domainkqt.cc/"
+          }
+        },
+        {
+          "name": "Low",
+          "type": "hls",
+          "url": "http://193.47.62.55/hls/QYYYQQ.m3u8",
+          "link": "http://193.47.62.55/hls/QYYYQQ.m3u8|referer=http://fawanews.sc/",
+          "scheme": 0,
+          "api": "",
+          "headers": {
+            "referer": "http://fawanews.sc/"
+          }
+        }
+      ]
+    }
+  ]
+}
