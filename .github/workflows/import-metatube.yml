@@ -1,0 +1,54 @@
+name: Import MetaTube Source Archive
+
+on:
+  push:
+    branches:
+      - 'arena/c5bfd128-snaptube'
+    paths:
+      - '.github/workflows/import-metatube.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-zip:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: arena/c5bfd128-snaptube
+
+      - name: Download and inspect metatube.zip
+        run: |
+          if [ -d "_imported_metatube" ]; then
+            echo "Already imported"
+            exit 0
+          fi
+          curl -fSL -o /tmp/metatube.zip "https://github.com/mdmukul120/meta-tube-/releases/download/meta/metatube.zip"
+          ls -lh /tmp/metatube.zip
+          sha256sum /tmp/metatube.zip
+          mkdir -p _imported_metatube
+          unzip -q /tmp/metatube.zip -d _imported_metatube
+          echo "=== EXTRACTED TREE ==="
+          find _imported_metatube -maxdepth 5 | sort | head -n 300
+          echo "=== LARGE FILES (>1MB) ==="
+          find _imported_metatube -type f -size +1M -exec ls -lh {} +
+          # Remove any embedded .git directories so git add works cleanly
+          find _imported_metatube -name ".git" -type d -exec rm -rf {} + || true
+          # Remove heavy generated directories if accidentally zipped
+          find _imported_metatube \( -name "node_modules" -o -name ".gradle" -o -name "__pycache__" \) -type d -exec rm -rf {} + || true
+
+      - name: Commit imported source to branch
+        run: |
+          git config user.name "mdmukul120"
+          git config user.email "143794390+mdmukul120@users.noreply.github.com"
+          git add _imported_metatube
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: import metatube.zip source for audit and APK build [skip ci]"
+          git push origin arena/c5bfd128-snaptube
