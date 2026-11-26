@@ -10,19 +10,16 @@ import {
   CheckCircle2,
   ChevronDown,
   ChevronRight,
-  CircleHelp,
   Clock3,
   Compass,
-  Film,
   Globe2,
-  Home,
   Info,
   ListVideo,
   Menu,
   MonitorPlay,
   Play,
   Plus,
-  Radio,
+  RefreshCw,
   Search,
   Settings2,
   ShieldCheck,
@@ -34,12 +31,14 @@ import {
   X,
 } from 'lucide-react';
 import { categories, fixturePreviews, starterChannels, STORAGE_KEYS } from './data.js';
+import { fetchProviderChannels, fetchProviderFixtures, fetchProviderScores } from './services/api.js';
 
 const en = {
   discover: 'Discover',
   ready: 'Ready to watch',
   channels: 'Channels',
   fixtures: 'Fixtures',
+  scores: 'Scores',
   saved: 'My list',
   manage: 'Manage lineup',
   explore: 'Explore',
@@ -53,7 +52,9 @@ const en = {
   pageChannelsTitle: 'Find your next channel',
   pageChannelsSubtitle: 'Browse your lineup, then add an authorized HLS or video source.',
   pageFixturesTitle: 'The fixture board',
-  pageFixturesSubtitle: 'Preview cards only — connect a licensed schedule provider for real dates and scores.',
+  pageFixturesSubtitle: 'Browse match schedules from your configured sports data provider.',
+  pageScoresTitle: 'Match scores',
+  pageScoresSubtitle: 'Follow score updates from your configured sports data provider.',
   pageSavedTitle: 'Your personal watchlist',
   pageSavedSubtitle: 'The channels you have saved on this device.',
   pageManageTitle: 'Make the lineup yours',
@@ -68,8 +69,9 @@ const en = {
   featured: 'Your channels',
   featuredNote: 'A few places to start',
   seeAll: 'See all',
-  upcoming: 'Fixture previews',
-  upcomingNote: 'Sample cards · no live schedule feed connected',
+  upcoming: 'Fixtures & events',
+  upcomingNote: 'Illustrative preview cards · no provider configured',
+  providerEventsNote: 'Events from your configured data provider',
   addChannel: 'Add channel',
   searchPlaceholder: 'Search channels…',
   allSports: 'All sports',
@@ -79,13 +81,21 @@ const en = {
   readyEmptyText: 'Add a licensed HLS, MP4 or WebM source to a channel to make it ready to watch.',
   savedEmpty: 'Your list is waiting',
   savedEmptyText: 'Tap the star on any channel to save it here.',
-  scheduleEmpty: 'Fixtures are in preview mode',
-  scheduleEmptyText: 'Connect a trusted schedule provider when you are ready to show confirmed dates and scores.',
+  scheduleEmpty: 'Fixture feed is not configured',
+  scheduleEmptyText: 'Sample cards are shown until a sports data provider is configured.',
+  fixtureFeedConnected: 'Sports schedule connected',
+  fixtureFeedConnectedText: 'Events below are supplied by your configured sports data provider.',
+  fixtureFeedUnavailableText: 'The schedule provider could not be reached. Try again after checking your server-side API settings.',
+  scoreFeedUnavailableText: 'The score provider could not be reached. Check your server-side API settings and try again.',
   sourceAdded: 'Source added',
   addSource: 'Add source',
   setupRequired: 'Setup required',
   watch: 'Watch',
   sourceReady: 'Source ready',
+  multipleLinks: 'Multiple links',
+  chooseStream: 'Choose a stream',
+  floatingPlayer: 'Floating player',
+  floatingPlayerUnavailable: 'Picture-in-picture is not available in this browser.',
   preview: 'Preview',
   localPreview: 'Browser preview',
   localOnly: 'Saved in this browser only',
@@ -96,6 +106,16 @@ const en = {
   sourcesStat: 'Sources ready',
   savedStat: 'Saved',
   previewData: 'Preview data',
+  feedLoading: 'Checking data feed…',
+  feedConnected: 'Sports feed connected',
+  feedSetupNeeded: 'API setup needed',
+  feedUnavailable: 'Provider unavailable',
+  refreshData: 'Refresh sports data',
+  scoreEmpty: 'No scores available',
+  scoreEmptyText: 'Configure an authorized scores provider to show current match scores here.',
+  fixtureEmpty: 'No fixtures returned',
+  fixtureEmptyText: 'Your provider is connected, but it has not returned any events yet.',
+  liveData: 'Provider data',
   sourceInfoTitle: 'A note about streams',
   sourceInfoText: 'This preview does not include third-party stream links. Add only direct sources you own or are licensed to use.',
   openManage: 'Open lineup setup',
@@ -149,6 +169,7 @@ const bn = {
   ready: 'দেখার জন্য প্রস্তুত',
   channels: 'চ্যানেল',
   fixtures: 'সূচি',
+  scores: 'স্কোর',
   saved: 'আমার তালিকা',
   manage: 'লাইনআপ পরিচালনা',
   explore: 'এক্সপ্লোর',
@@ -162,7 +183,9 @@ const bn = {
   pageChannelsTitle: 'আপনার পছন্দের চ্যানেল খুঁজুন',
   pageChannelsSubtitle: 'লাইনআপ দেখুন, তারপর অনুমোদিত HLS বা ভিডিও উৎস যোগ করুন।',
   pageFixturesTitle: 'ম্যাচের সূচি',
-  pageFixturesSubtitle: 'এগুলো নমুনা কার্ড—আসল সময় ও স্কোরের জন্য অনুমোদিত সূচি-সেবা যুক্ত করুন।',
+  pageFixturesSubtitle: 'আপনার কনফিগার করা স্পোর্টস ডেটা-সেবার ম্যাচের সময় দেখুন।',
+  pageScoresTitle: 'ম্যাচের স্কোর',
+  pageScoresSubtitle: 'আপনার কনফিগার করা ডেটা-সেবা থেকে স্কোর আপডেট দেখুন।',
   pageSavedTitle: 'আপনার পছন্দের তালিকা',
   pageSavedSubtitle: 'এই ডিভাইসে সংরক্ষিত চ্যানেলগুলো।',
   pageManageTitle: 'নিজের মতো লাইনআপ সাজান',
@@ -177,8 +200,9 @@ const bn = {
   featured: 'আপনার চ্যানেল',
   featuredNote: 'শুরু করার কয়েকটি জায়গা',
   seeAll: 'সব দেখুন',
-  upcoming: 'ম্যাচের প্রিভিউ',
-  upcomingNote: 'নমুনা কার্ড · লাইভ সূচি যুক্ত নেই',
+  upcoming: 'সূচি ও ইভেন্ট',
+  upcomingNote: 'উদাহরণ কার্ড · কোনো ডেটা-সেবা যুক্ত নেই',
+  providerEventsNote: 'কনফিগার করা ডেটা-সেবার ইভেন্ট',
   addChannel: 'চ্যানেল যোগ করুন',
   searchPlaceholder: 'চ্যানেল খুঁজুন…',
   allSports: 'সব খেলা',
@@ -188,13 +212,21 @@ const bn = {
   readyEmptyText: 'অনুমোদিত HLS, MP4 বা WebM উৎস যোগ করলে চ্যানেল দেখার জন্য প্রস্তুত হবে।',
   savedEmpty: 'আপনার তালিকা তৈরি হয়নি',
   savedEmptyText: 'এখানে রাখতে যেকোনো চ্যানেলের তারকা চিহ্নে চাপ দিন।',
-  scheduleEmpty: 'সূচি এখন প্রিভিউ মোডে',
-  scheduleEmptyText: 'নিশ্চিত সময় ও স্কোর দেখাতে চাইলে অনুমোদিত সূচি-সেবা যুক্ত করুন।',
+  scheduleEmpty: 'সূচি-সেবা কনফিগার করা হয়নি',
+  scheduleEmptyText: 'স্পোর্টস ডেটা-সেবা কনফিগার না করা পর্যন্ত নমুনা কার্ড দেখানো হবে।',
+  fixtureFeedConnected: 'স্পোর্টস সূচি যুক্ত হয়েছে',
+  fixtureFeedConnectedText: 'নিচের ইভেন্টগুলো আপনার কনফিগার করা ডেটা-সেবা থেকে এসেছে।',
+  fixtureFeedUnavailableText: 'সূচি-সেবায় সংযোগ পাওয়া যাচ্ছে না। সার্ভার-সাইড API সেটিং দেখে আবার চেষ্টা করুন।',
+  scoreFeedUnavailableText: 'স্কোর-সেবায় সংযোগ পাওয়া যাচ্ছে না। সার্ভার-সাইড API সেটিং দেখে আবার চেষ্টা করুন।',
   sourceAdded: 'উৎস যোগ হয়েছে',
   addSource: 'উৎস যোগ করুন',
   setupRequired: 'সেটআপ প্রয়োজন',
   watch: 'দেখুন',
   sourceReady: 'উৎস প্রস্তুত',
+  multipleLinks: 'একাধিক লিংক',
+  chooseStream: 'স্ট্রিম বেছে নিন',
+  floatingPlayer: 'ফ্লোটিং প্লেয়ার',
+  floatingPlayerUnavailable: 'এই ব্রাউজারে পিকচার-ইন-পিকচার পাওয়া যাচ্ছে না।',
   preview: 'প্রিভিউ',
   localPreview: 'ব্রাউজার প্রিভিউ',
   localOnly: 'শুধু এই ব্রাউজারে সংরক্ষিত',
@@ -205,6 +237,16 @@ const bn = {
   sourcesStat: 'প্রস্তুত উৎস',
   savedStat: 'সংরক্ষিত',
   previewData: 'প্রিভিউ ডেটা',
+  feedLoading: 'ডেটা-সেবা দেখা হচ্ছে…',
+  feedConnected: 'স্পোর্টস ডেটা যুক্ত',
+  feedSetupNeeded: 'API সেটআপ প্রয়োজন',
+  feedUnavailable: 'ডেটা-সেবা পাওয়া যাচ্ছে না',
+  refreshData: 'স্পোর্টস ডেটা রিফ্রেশ',
+  scoreEmpty: 'কোনো স্কোর পাওয়া যায়নি',
+  scoreEmptyText: 'এখানে ম্যাচের স্কোর দেখতে অনুমোদিত স্কোর-সেবা কনফিগার করুন।',
+  fixtureEmpty: 'কোনো সূচি পাওয়া যায়নি',
+  fixtureEmptyText: 'ডেটা-সেবা যুক্ত আছে, তবে এখনো কোনো ইভেন্ট পাঠায়নি।',
+  liveData: 'ডেটা-সেবা',
   sourceInfoTitle: 'স্ট্রিম সম্পর্কে',
   sourceInfoText: 'এই প্রিভিউতে তৃতীয় পক্ষের স্ট্রিম লিংক নেই। নিজের বা ব্যবহারের অনুমতি আছে এমন উৎস যোগ করুন।',
   openManage: 'লাইনআপ সেটআপ খুলুন',
@@ -258,6 +300,7 @@ const contentKeys = {
   live: { title: 'pageReadyTitle', subtitle: 'pageReadySubtitle' },
   channels: { title: 'pageChannelsTitle', subtitle: 'pageChannelsSubtitle' },
   fixtures: { title: 'pageFixturesTitle', subtitle: 'pageFixturesSubtitle' },
+  scores: { title: 'pageScoresTitle', subtitle: 'pageScoresSubtitle' },
   saved: { title: 'pageSavedTitle', subtitle: 'pageSavedSubtitle' },
   manage: { title: 'pageManageTitle', subtitle: 'pageManageSubtitle' },
 };
@@ -308,11 +351,58 @@ function App() {
   const [configOpen, setConfigOpen] = useState(false);
   const [playerChannel, setPlayerChannel] = useState(null);
   const [toast, setToast] = useState('');
+  const [channelFeed, setChannelFeed] = useState({ configured: false, items: [], error: false });
+  const [fixtureFeed, setFixtureFeed] = useState({ configured: false, items: [], error: false });
+  const [scoreFeed, setScoreFeed] = useState({ configured: false, items: [], error: false });
+  const [feedLoading, setFeedLoading] = useState(true);
+  const [feedRefreshKey, setFeedRefreshKey] = useState(0);
   const searchRef = useRef(null);
   const t = useMemo(() => (key) => (language === 'bn' ? bn[key] : en[key]) ?? en[key] ?? key, [language]);
 
   useEffect(() => writeStorage(STORAGE_KEYS.channels, channels), [channels]);
   useEffect(() => writeStorage(STORAGE_KEYS.favorites, favorites), [favorites]);
+  useEffect(() => {
+    const controller = new AbortController();
+    let active = true;
+    setFeedLoading(true);
+
+    Promise.all([
+      fetchProviderChannels(controller.signal),
+      fetchProviderFixtures(controller.signal),
+      fetchProviderScores(controller.signal),
+    ]).then(([channelsResult, fixturesResult, scoresResult]) => {
+      if (!active) return;
+      setChannelFeed(channelsResult);
+      setFixtureFeed(fixturesResult);
+      setScoreFeed(scoresResult);
+    }).catch(() => {
+      if (!active) return;
+      setChannelFeed({ configured: false, items: [], error: true });
+      setFixtureFeed({ configured: false, items: [], error: true });
+      setScoreFeed({ configured: false, items: [], error: true });
+    }).finally(() => {
+      if (active) setFeedLoading(false);
+    });
+
+    return () => {
+      active = false;
+      controller.abort();
+    };
+  }, [feedRefreshKey]);
+  useEffect(() => {
+    if (!scoreFeed.configured) return undefined;
+    const controller = new AbortController();
+    const refreshScoreFeed = () => {
+      fetchProviderScores(controller.signal).then((result) => {
+        if (!controller.signal.aborted) setScoreFeed(result);
+      });
+    };
+    const timer = window.setInterval(refreshScoreFeed, 60_000);
+    return () => {
+      window.clearInterval(timer);
+      controller.abort();
+    };
+  }, [scoreFeed.configured]);
   useEffect(() => {
     document.documentElement.lang = language === 'bn' ? 'bn' : 'en';
   }, [language]);
@@ -329,7 +419,10 @@ function App() {
   };
 
   const openConfig = (channel = null) => {
-    setConfigChannel(channel);
+    const editableChannel = channel?.isProvider
+      ? { ...channel, id: undefined, isProvider: false, isCustom: true }
+      : channel;
+    setConfigChannel(editableChannel);
     setConfigOpen(true);
   };
 
@@ -385,8 +478,23 @@ function App() {
     showToast(t('clearDemo'));
   };
 
+  const allChannels = useMemo(() => [...channelFeed.items, ...channels], [channelFeed.items, channels]);
+  const fixturesForDisplay = fixtureFeed.configured ? fixtureFeed.items : fixturePreviews;
+  const providerFeaturedMatch = scoreFeed.items[0] || fixtureFeed.items[0];
+  const featuredMatch = providerFeaturedMatch || fixturePreviews[0];
+  const featuredMatchIsSample = !providerFeaturedMatch;
+  const providerConfigured = channelFeed.configured || fixtureFeed.configured || scoreFeed.configured;
+  const providerUnavailable = channelFeed.error || fixtureFeed.error || scoreFeed.error;
+  const feedStatusKey = feedLoading
+    ? 'feedLoading'
+    : providerUnavailable
+      ? 'feedUnavailable'
+      : providerConfigured
+        ? 'feedConnected'
+        : 'feedSetupNeeded';
+
   const filteredChannels = useMemo(() => {
-    let list = channels;
+    let list = allChannels;
     if (view === 'saved') list = list.filter((channel) => favorites.includes(channel.id));
     if (view === 'live') list = list.filter((channel) => Boolean(channel.streamUrl));
     if (category !== 'All sports' && (view === 'home' || view === 'channels')) {
@@ -400,12 +508,24 @@ function App() {
     }
     if (view === 'home' && !query) return list.slice(0, 4);
     return list;
-  }, [channels, favorites, category, view, searchTerm]);
+  }, [allChannels, favorites, category, view, searchTerm]);
+
+  const filteredScores = useMemo(() => {
+    let list = scoreFeed.items;
+    if (category !== 'All sports') list = list.filter((score) => score.sport === category);
+    const query = searchTerm.trim().toLowerCase();
+    if (query) {
+      list = list.filter((score) => (
+        `${score.home} ${score.away} ${score.competition || ''} ${score.sport} ${score.status || ''}`.toLowerCase().includes(query)
+      ));
+    }
+    return list;
+  }, [scoreFeed.items, category, searchTerm]);
 
   const pageMeta = contentKeys[view] || contentKeys.home;
   const pageTitle = t(pageMeta.title);
   const pageSubtitle = t(pageMeta.subtitle);
-  const readyCount = channels.filter((channel) => Boolean(channel.streamUrl)).length;
+  const readyCount = allChannels.filter((channel) => Boolean(channel.streamUrl)).length;
   const dateLabel = new Intl.DateTimeFormat(language === 'bn' ? 'bn-BD' : 'en-US', {
     weekday: 'long',
     day: 'numeric',
@@ -420,6 +540,7 @@ function App() {
         { id: 'live', label: t('ready'), Icon: Signal, count: readyCount || null },
         { id: 'channels', label: t('channels'), Icon: Tv },
         { id: 'fixtures', label: t('fixtures'), Icon: CalendarDays },
+        { id: 'scores', label: t('scores'), Icon: Activity, count: scoreFeed.items.length || null },
       ],
     },
     {
@@ -495,7 +616,7 @@ function App() {
             >
               <Menu size={20} />
             </button>
-            <div className="breadcrumb"><span>CRICFy TV</span><ChevronRight size={13} /><strong>{t(view === 'home' ? 'discover' : view === 'live' ? 'ready' : view === 'channels' ? 'channels' : view === 'fixtures' ? 'fixtures' : view === 'saved' ? 'saved' : 'manage')}</strong></div>
+            <div className="breadcrumb"><span>CRICFy TV</span><ChevronRight size={13} /><strong>{t(view === 'home' ? 'discover' : view === 'live' ? 'ready' : view === 'channels' ? 'channels' : view === 'fixtures' ? 'fixtures' : view === 'scores' ? 'scores' : view === 'saved' ? 'saved' : 'manage')}</strong></div>
           </div>
           <div className="topbar-actions">
             {searchOpen ? (
@@ -559,7 +680,12 @@ function App() {
               <p className="page-subtitle">{pageSubtitle}</p>
             </div>
             <div className="intro-actions">
-              <span className="sync-status"><span className="status-dot" />{t('previewData')}</span>
+              <div className={`feed-status ${providerUnavailable ? 'feed-status-error' : providerConfigured ? 'feed-status-connected' : ''}`} aria-live="polite">
+                <span className="feed-status-label"><span className="status-dot" />{t(feedStatusKey)}</span>
+                <button type="button" className="feed-refresh-button" onClick={() => setFeedRefreshKey((key) => key + 1)} aria-label={t('refreshData')} title={t('refreshData')} disabled={feedLoading}>
+                  <RefreshCw size={14} className={feedLoading ? 'is-spinning' : ''} />
+                </button>
+              </div>
               <button type="button" className="button button-outline" onClick={() => openConfig()}>
                 <Plus size={16} />{t('addChannel')}
               </button>
@@ -568,9 +694,16 @@ function App() {
 
           {view === 'home' && (
             <>
-              <Hero t={t} onBrowse={() => changeView('channels')} onManage={() => changeView('manage')} />
+              <Hero
+                t={t}
+                onBrowse={() => changeView('channels')}
+                onManage={() => changeView('manage')}
+                featuredMatch={featuredMatch}
+                isSample={featuredMatchIsSample}
+                language={language}
+              />
               <div className="stats-grid">
-                <StatCard Icon={Tv} label={t('channelsStat')} value={channels.length.toString().padStart(2, '0')} note="In your lineup" tone="lime" />
+                <StatCard Icon={Tv} label={t('channelsStat')} value={allChannels.length.toString().padStart(2, '0')} note="In your lineup" tone="lime" />
                 <StatCard Icon={MonitorPlay} label={t('sourcesStat')} value={readyCount.toString().padStart(2, '0')} note="Authorized sources" tone="blue" />
                 <StatCard Icon={Bookmark} label={t('savedStat')} value={favorites.length.toString().padStart(2, '0')} note="On this device" tone="orange" />
               </div>
@@ -591,8 +724,13 @@ function App() {
                     />
                   </section>
                   <section className="surface-section fixture-section-home">
-                    <SectionHeading title={t('upcoming')} note={t('upcomingNote')} actionLabel={t('seeAll')} onAction={() => changeView('fixtures')} />
-                    <FixtureList t={t} compact />
+                    <SectionHeading
+                      title={t('upcoming')}
+                      note={t(fixtureFeed.error ? 'fixtureFeedUnavailableText' : fixtureFeed.configured ? 'providerEventsNote' : 'upcomingNote')}
+                      actionLabel={t('seeAll')}
+                      onAction={() => changeView('fixtures')}
+                    />
+                    <FixtureList t={t} fixtures={fixturesForDisplay.slice(0, 3)} sample={!fixtureFeed.configured} compact language={language} />
                   </section>
                 </div>
                 <aside className="right-rail">
@@ -611,11 +749,7 @@ function App() {
                     <p>{t('sourceInfoText')}</p>
                     <button type="button" onClick={() => changeView('manage')}>{t('openManage')} <ArrowUpRight size={14} /></button>
                   </div>
-                  <div className="mini-fixture-card">
-                    <div className="mini-fixture-top"><span className="live-mini-dot" />{t('sampleFixture')}</div>
-                    <div className="mini-team-row"><span>🇧🇩</span><strong>BAN</strong><small>VS</small><strong>IND</strong><span>🇮🇳</span></div>
-                    <p>{t('scheduleFeed')}</p>
-                  </div>
+                  <MiniMatchCard t={t} fixture={featuredMatch} isSample={featuredMatchIsSample} language={language} />
                 </aside>
               </div>
             </>
@@ -661,7 +795,30 @@ function App() {
             </section>
           )}
 
-          {view === 'fixtures' && <FixturesPage t={t} onManage={() => changeView('manage')} />}
+          {view === 'fixtures' && (
+            <FixturesPage
+              t={t}
+              fixtures={fixturesForDisplay}
+              sample={!fixtureFeed.configured}
+              unavailable={fixtureFeed.error}
+              language={language}
+              onManage={() => changeView('manage')}
+            />
+          )}
+
+          {view === 'scores' && (
+            <ScoresPage
+              t={t}
+              scores={filteredScores}
+              category={category}
+              onCategoryChange={setCategory}
+              configured={scoreFeed.configured}
+              unavailable={scoreFeed.error}
+              loading={feedLoading}
+              language={language}
+              onRefresh={() => setFeedRefreshKey((key) => key + 1)}
+            />
+          )}
 
           {view === 'manage' && (
             <ManagePage
@@ -705,7 +862,14 @@ function App() {
   );
 }
 
-function Hero({ t, onBrowse, onManage }) {
+function Hero({ t, onBrowse, onManage, featuredMatch, isSample, language }) {
+  const homeCode = featuredMatch?.homeCode || featuredMatch?.home?.slice(0, 3).toUpperCase() || 'HOME';
+  const awayCode = featuredMatch?.awayCode || featuredMatch?.away?.slice(0, 3).toUpperCase() || 'AWAY';
+  const hasScore = Boolean(featuredMatch?.homeScore || featuredMatch?.awayScore);
+  const matchStatus = isSample
+    ? t('scheduleFeed')
+    : featuredMatch?.status || formatMatchDate(featuredMatch?.startsAt, language) || featuredMatch?.competition || t('liveData');
+
   return (
     <section className="hero-card">
       <div className="hero-copy">
@@ -727,17 +891,47 @@ function Hero({ t, onBrowse, onManage }) {
         <div className="hero-orbit hero-orbit-one" />
         <div className="hero-orbit hero-orbit-two" />
         <div className="hero-scoreboard">
-          <div className="scoreboard-head"><span className="score-preview"><span />{t('sampleEvent')}</span><span className="scoreboard-menu">•••</span></div>
+          <div className="scoreboard-head"><span className="score-preview"><span className={isSample ? '' : 'score-live-dot'} />{isSample ? t('sampleEvent') : t('liveData')}</span><span className="scoreboard-menu">•••</span></div>
           <div className="scoreboard-match">
-            <div className="score-team"><span className="score-flag">🇧🇩</span><strong>BAN</strong><small>Bangladesh</small></div>
-            <div className="score-versus">VS</div>
-            <div className="score-team"><span className="score-flag">🇮🇳</span><strong>IND</strong><small>India</small></div>
+            <div className="score-team"><span className="score-flag">{featuredMatch?.homeFlag || '🏟️'}</span><strong>{homeCode}</strong><small>{featuredMatch?.home || 'Home'}</small></div>
+            <div className="score-versus">{hasScore ? `${featuredMatch.homeScore || '–'} : ${featuredMatch.awayScore || '–'}` : 'VS'}</div>
+            <div className="score-team"><span className="score-flag">{featuredMatch?.awayFlag || '🏟️'}</span><strong>{awayCode}</strong><small>{featuredMatch?.away || 'Away'}</small></div>
           </div>
-          <div className="scoreboard-bottom"><Clock3 size={13} /><span>{t('scheduleFeed')}</span><ArrowUpRight size={13} /></div>
+          <div className="scoreboard-bottom"><Clock3 size={13} /><span>{matchStatus}</span><ArrowUpRight size={13} /></div>
         </div>
         <div className="hero-art-label"><span className="art-label-icon"><Activity size={14} /></span><span><b>SPORTS</b><small>{t('previewData')}</small></span></div>
       </div>
     </section>
+  );
+}
+
+function formatMatchDate(value, language) {
+  if (!value) return '';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+  return new Intl.DateTimeFormat(language === 'bn' ? 'bn-BD' : 'en-US', {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(date);
+}
+
+function MiniMatchCard({ t, fixture, isSample, language }) {
+  const hasScore = Boolean(fixture?.homeScore || fixture?.awayScore);
+  const homeCode = fixture?.homeCode || fixture?.home?.slice(0, 3).toUpperCase() || 'HOME';
+  const awayCode = fixture?.awayCode || fixture?.away?.slice(0, 3).toUpperCase() || 'AWAY';
+  const caption = isSample ? t('sampleFixture') : fixture?.competition || fixture?.status || t('liveData');
+  return (
+    <div className="mini-fixture-card">
+      <div className="mini-fixture-top"><span className={`live-mini-dot ${isSample ? '' : 'connected-mini-dot'}`} />{caption}</div>
+      <div className="mini-team-row">
+        <span>{fixture?.homeFlag || '🏟️'}</span><strong>{homeCode}</strong>
+        <small>{hasScore ? `${fixture.homeScore || '–'} : ${fixture.awayScore || '–'}` : 'VS'}</small>
+        <strong>{awayCode}</strong><span>{fixture?.awayFlag || '🏟️'}</span>
+      </div>
+      <p>{isSample ? t('scheduleFeed') : fixture?.status || formatMatchDate(fixture?.startsAt, language) || `${fixture?.home || ''} vs ${fixture?.away || ''}`}</p>
+    </div>
   );
 }
 
@@ -816,7 +1010,10 @@ function ChannelCard({ channel, index, isFavorite, onFavorite, onWatch, onConfig
       </div>
       <div className="channel-card-body">
         <div className="channel-info">
-          <span className={`channel-state ${hasSource ? 'channel-state-ready' : ''}`}><i />{hasSource ? t('sourceReady') : t('setupRequired')}</span>
+          <div className="channel-source-row">
+            <span className={`channel-state ${hasSource ? 'channel-state-ready' : ''}`}><i />{hasSource ? t('sourceReady') : t('setupRequired')}</span>
+            {Array.isArray(channel.streamOptions) && channel.streamOptions.length > 1 && <span className="multi-source-tag"><ListVideo size={11} />{t('multipleLinks')}</span>}
+          </div>
           <p>{channel.subtitle || t('builtForFans')}</p>
         </div>
         <div className="channel-card-actions">
@@ -830,26 +1027,43 @@ function ChannelCard({ channel, index, isFavorite, onFavorite, onWatch, onConfig
   );
 }
 
-function FixtureList({ t, compact = false }) {
+function FixtureList({ t, fixtures = [], sample = false, compact = false, scoreMode = false, language = 'en' }) {
+  if (!fixtures.length) return <div className="fixture-empty-inline">{t('fixtureEmpty')}</div>;
+
   return (
     <div className={`fixture-list ${compact ? 'fixture-list-compact' : ''}`}>
-      {fixturePreviews.map((fixture, index) => (
-        <article className="fixture-row" key={fixture.id}>
-          <div className={`fixture-sport-icon ${fixture.sport === 'Football' ? 'football-icon' : ''}`}>{fixture.sport === 'Cricket' ? '🏏' : '⚽'}</div>
-          <div className="fixture-row-main">
-            <div className="fixture-row-top"><span>{fixture.sport}</span><span className="preview-tag">{t('sampleOnly')}</span></div>
-            <div className="fixture-team-line">
-              <span className="fixture-team"><i>{fixture.homeFlag}</i><b>{fixture.homeCode}</b></span>
-              <span className="fixture-vs">VS</span>
-              <span className="fixture-team"><i>{fixture.awayFlag}</i><b>{fixture.awayCode}</b></span>
+      {fixtures.map((fixture, index) => {
+        const hasScore = Boolean(fixture.homeScore || fixture.awayScore);
+        const dateLabel = formatMatchDate(fixture.startsAt, language);
+        const rightLabel = sample ? 'TBD' : fixture.status || dateLabel || '—';
+        const note = fixture.note || dateLabel || fixture.competition || (sample ? t('fixtureRightsNote') : t('liveData'));
+        return (
+          <article className="fixture-row" key={fixture.id || `${fixture.home}-${fixture.away}-${index}`}>
+            <div className={`fixture-sport-icon ${fixture.sport === 'Football' ? 'football-icon' : ''}`}>
+              {fixture.sport === 'Cricket' ? '🏏' : fixture.sport === 'Football' ? '⚽' : '🏟️'}
             </div>
-            {!compact && <p>{fixture.home} vs {fixture.away}</p>}
-            <small>{fixture.note}</small>
-          </div>
-          <div className="fixture-row-more"><span>TBD</span><ArrowUpRight size={14} /></div>
-          {index === 0 && <span className="fixture-row-glow" />}
-        </article>
-      ))}
+            <div className="fixture-row-main">
+              <div className="fixture-row-top">
+                <span>{fixture.sport}</span>
+                {sample
+                  ? <span className="preview-tag">{t('sampleOnly')}</span>
+                  : fixture.competition && <span className="provider-tag">{fixture.competition}</span>}
+              </div>
+              <div className="fixture-team-line">
+                <span className="fixture-team"><i>{fixture.homeFlag || '🏟️'}</i><b>{fixture.homeCode || fixture.home?.slice(0, 3).toUpperCase()}</b></span>
+                <span className={scoreMode || hasScore ? 'fixture-score' : 'fixture-vs'}>
+                  {scoreMode || hasScore ? `${fixture.homeScore || '–'} : ${fixture.awayScore || '–'}` : 'VS'}
+                </span>
+                <span className="fixture-team"><i>{fixture.awayFlag || '🏟️'}</i><b>{fixture.awayCode || fixture.away?.slice(0, 3).toUpperCase()}</b></span>
+              </div>
+              {!compact && <p>{fixture.home} vs {fixture.away}</p>}
+              <small>{note}</small>
+            </div>
+            <div className="fixture-row-more"><span>{rightLabel}</span><ArrowUpRight size={14} /></div>
+            {index === 0 && <span className="fixture-row-glow" />}
+          </article>
+        );
+      })}
     </div>
   );
 }
@@ -865,19 +1079,58 @@ function EmptyState({ Icon, title, text, actionLabel, onAction }) {
   );
 }
 
-function FixturesPage({ t, onManage }) {
+function FixturesPage({ t, fixtures, sample, unavailable, language, onManage }) {
+  const bannerTitle = unavailable ? 'feedUnavailable' : sample ? 'scheduleEmpty' : 'fixtureFeedConnected';
+  const bannerText = unavailable ? 'fixtureFeedUnavailableText' : sample ? 'scheduleEmptyText' : 'fixtureFeedConnectedText';
   return (
     <section className="surface-section full-page-section fixtures-page">
       <div className="fixtures-page-banner">
         <div className="fixtures-banner-icon"><CalendarDays size={19} /></div>
-        <div><span className="eyebrow">{t('previewData').toUpperCase()}</span><h2>{t('scheduleEmpty')}</h2><p>{t('scheduleEmptyText')}</p></div>
-        <button type="button" className="button button-outline" onClick={onManage}><Settings2 size={15} />{t('setupSources')}</button>
+        <div>
+          <span className="eyebrow">{t(unavailable ? 'feedUnavailable' : sample ? 'previewData' : 'liveData').toUpperCase()}</span>
+          <h2>{t(bannerTitle)}</h2>
+          <p>{t(bannerText)}</p>
+        </div>
+        <button type="button" className="button button-outline" onClick={onManage}><Settings2 size={15} />{t('manage')}</button>
       </div>
       <div className="fixture-grid-layout">
-        <div className="fixture-grid-heading"><div><h3>{t('upcoming')}</h3><p>{t('fixtureRightsNote')}</p></div><span className="preview-tag">{t('sampleOnly')}</span></div>
-        <FixtureList t={t} />
+        <div className="fixture-grid-heading">
+          <div><h3>{t('upcoming')}</h3><p>{t(sample ? 'fixtureRightsNote' : 'providerEventsNote')}</p></div>
+          <span className={sample || unavailable ? 'preview-tag' : 'provider-tag'}>{t(unavailable ? 'feedUnavailable' : sample ? 'sampleOnly' : 'liveData')}</span>
+        </div>
+        {fixtures.length
+          ? <FixtureList t={t} fixtures={fixtures} sample={sample} language={language} />
+          : <EmptyState Icon={CalendarDays} title={t(unavailable ? 'feedUnavailable' : 'fixtureEmpty')} text={t(unavailable ? 'fixtureFeedUnavailableText' : 'fixtureEmptyText')} actionLabel={unavailable ? undefined : t('manage')} onAction={unavailable ? undefined : onManage} />}
       </div>
-      <div className="fixture-rights-note"><Info size={16} /><span>{t('fixtureRightsNote')}</span></div>
+      <div className="fixture-rights-note"><Info size={16} /><span>{t(unavailable ? 'fixtureFeedUnavailableText' : sample ? 'fixtureRightsNote' : 'providerEventsNote')}</span></div>
+    </section>
+  );
+}
+
+function ScoresPage({ t, scores, category, onCategoryChange, configured, unavailable, loading, language, onRefresh }) {
+  return (
+    <section className="surface-section full-page-section scores-page">
+      <div className="scores-page-heading">
+        <div>
+          <span className="eyebrow">{t(unavailable ? 'feedUnavailable' : configured ? 'liveData' : 'feedSetupNeeded').toUpperCase()}</span>
+          <h2>{t('pageScoresTitle')}</h2>
+          <p>{t('pageScoresSubtitle')}</p>
+        </div>
+        <button type="button" className="button button-outline" onClick={onRefresh} disabled={loading} aria-label={t('refreshData')}>
+          <RefreshCw size={14} className={loading ? 'is-spinning' : ''} />{t('refreshData')}
+        </button>
+      </div>
+      <div className="catalog-toolbar">
+        <CategoryFilters active={category} onChange={onCategoryChange} t={t} />
+        <span className="result-count">{scores.length} {t('scores').toLowerCase()}</span>
+      </div>
+      {scores.length
+        ? <FixtureList t={t} fixtures={scores} scoreMode language={language} />
+        : <EmptyState
+          Icon={Activity}
+          title={unavailable ? t('feedUnavailable') : configured ? t('fixtureEmpty') : t('scoreEmpty')}
+          text={unavailable ? t('scoreFeedUnavailableText') : configured ? t('fixtureEmptyText') : t('scoreEmptyText')}
+        />}
     </section>
   );
 }
@@ -978,6 +1231,7 @@ function SourceDialog({ channel, t, onClose, onSave }) {
       category,
       subtitle: subtitle.trim() || t('builtForFans'),
       streamUrl: trimmedUrl,
+      streamOptions: trimmedUrl ? [{ id: 'primary', label: 'Primary stream', url: trimmedUrl }] : [],
       art: channel?.art || (category === 'Cricket' ? 'cricket' : category === 'Football' ? 'football' : 'custom'),
       isCustom: channel?.isCustom ?? true,
     });
@@ -1011,13 +1265,26 @@ function SourceDialog({ channel, t, onClose, onSave }) {
 function PlayerDialog({ channel, t, onClose, onConfigure }) {
   const videoRef = useRef(null);
   const [playbackError, setPlaybackError] = useState('');
-  const hasSource = Boolean(channel.streamUrl);
+  const [activeStreamUrl, setActiveStreamUrl] = useState(() => channel.streamUrl || channel.streamOptions?.[0]?.url || '');
+  const [pictureInPictureSupported, setPictureInPictureSupported] = useState(false);
+  const [pictureInPictureActive, setPictureInPictureActive] = useState(false);
+  const streamOptions = Array.isArray(channel.streamOptions) && channel.streamOptions.length
+    ? channel.streamOptions
+    : channel.streamUrl
+      ? [{ id: 'primary', label: 'Primary stream', url: channel.streamUrl }]
+      : [];
+  const currentStreamUrl = streamOptions.find((option) => option.url === activeStreamUrl)?.url || streamOptions[0]?.url || '';
+  const hasSource = Boolean(currentStreamUrl);
+
+  useEffect(() => {
+    setActiveStreamUrl(channel.streamUrl || channel.streamOptions?.[0]?.url || '');
+  }, [channel.id, channel.streamUrl, channel.streamOptions]);
 
   useEffect(() => {
     setPlaybackError('');
     if (!hasSource || !videoRef.current) return undefined;
     const video = videoRef.current;
-    const url = channel.streamUrl;
+    const url = currentStreamUrl;
     const isHls = /\.m3u8$/i.test(new URL(url).pathname);
     let hls;
     let disposed = false;
@@ -1055,7 +1322,32 @@ function PlayerDialog({ channel, t, onClose, onConfigure }) {
       video.removeAttribute('src');
       video.load();
     };
-  }, [channel.id, channel.streamUrl, hasSource, t]);
+  }, [channel.id, currentStreamUrl, hasSource, t]);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return undefined;
+    setPictureInPictureSupported(Boolean(document.pictureInPictureEnabled && video.requestPictureInPicture));
+    const syncPipState = () => setPictureInPictureActive(document.pictureInPictureElement === video);
+    video.addEventListener('enterpictureinpicture', syncPipState);
+    video.addEventListener('leavepictureinpicture', syncPipState);
+    syncPipState();
+    return () => {
+      video.removeEventListener('enterpictureinpicture', syncPipState);
+      video.removeEventListener('leavepictureinpicture', syncPipState);
+    };
+  }, [channel.id, hasSource]);
+
+  const togglePictureInPicture = async () => {
+    const video = videoRef.current;
+    if (!video) return;
+    try {
+      if (document.pictureInPictureElement === video) await document.exitPictureInPicture();
+      else await video.requestPictureInPicture();
+    } catch {
+      setPlaybackError(t('floatingPlayerUnavailable'));
+    }
+  };
 
   useEffect(() => {
     const handleKey = (event) => event.key === 'Escape' && onClose();
@@ -1070,7 +1362,26 @@ function PlayerDialog({ channel, t, onClose, onConfigure }) {
         {hasSource ? (
           <>
             <div className="video-frame"><video ref={videoRef} controls playsInline preload="metadata" aria-label={`${t('playerTitle')}: ${channel.name}`} />{playbackError && <div className="video-error"><Info size={17} /><span>{playbackError}</span></div>}</div>
-            <div className="player-footer"><span><span className="status-dot" />{channel.category} · {t('sourceReady')}</span><p>{t('playbackHelp')}</p><button type="button" className="button button-ghost button-small" onClick={onConfigure}><Settings2 size={14} />{t('streamSetup')}</button></div>
+            <div className="player-footer">
+              <span><span className="status-dot" />{channel.category} · {t('sourceReady')}</span>
+              {streamOptions.length > 1 && (
+                <label className="stream-select">
+                  <span>{t('chooseStream')}</span>
+                  <select value={currentStreamUrl} onChange={(event) => setActiveStreamUrl(event.target.value)}>
+                    {streamOptions.map((option) => <option key={option.id || option.url} value={option.url}>{option.label}</option>)}
+                  </select>
+                </label>
+              )}
+              <p>{t('playbackHelp')}</p>
+              <div className="player-footer-actions">
+                {pictureInPictureSupported && (
+                  <button type="button" className={`button button-small ${pictureInPictureActive ? 'button-bright' : 'button-outline'}`} onClick={togglePictureInPicture}>
+                    <MonitorPlay size={14} />{t('floatingPlayer')}
+                  </button>
+                )}
+                <button type="button" className="button button-ghost button-small" onClick={onConfigure}><Settings2 size={14} />{t('streamSetup')}</button>
+              </div>
+            </div>
           </>
         ) : (
           <div className="player-empty">
