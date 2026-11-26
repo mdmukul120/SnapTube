@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: arena/c5bfd128-snaptube
+          fetch-depth: 0
 
       - name: Download and inspect metatube.zip
         run: |
@@ -28,27 +29,29 @@ jobs:
             exit 0
           fi
           curl -fSL -o /tmp/metatube.zip "https://github.com/mdmukul120/meta-tube-/releases/download/meta/metatube.zip"
-          ls -lh /tmp/metatube.zip
-          sha256sum /tmp/metatube.zip
           mkdir -p _imported_metatube
-          unzip -q /tmp/metatube.zip -d _imported_metatube
-          echo "=== EXTRACTED TREE ==="
-          find _imported_metatube -maxdepth 5 | sort | head -n 300
-          echo "=== LARGE FILES (>1MB) ==="
-          find _imported_metatube -type f -size +1M -exec ls -lh {} +
-          # Remove any embedded .git directories so git add works cleanly
-          find _imported_metatube -name ".git" -type d -exec rm -rf {} + || true
-          # Remove heavy generated directories if accidentally zipped
-          find _imported_metatube \( -name "node_modules" -o -name ".gradle" -o -name "__pycache__" \) -type d -exec rm -rf {} + || true
+          unzip -q -o /tmp/metatube.zip -d _imported_metatube
+          find _imported_metatube -name ".git" -exec rm -rf {} + || true
+          find _imported_metatube \( -name "node_modules" -o -name ".gradle" -o -name "__pycache__" -o -name ".DS_Store" \) -exec rm -rf {} + || true
+          find _imported_metatube -maxdepth 4 | sort > /tmp/tree.txt
+          head -n 60 /tmp/tree.txt
 
       - name: Commit imported source to branch
         run: |
+          set +e
           git config user.name "mdmukul120"
           git config user.email "143794390+mdmukul120@users.noreply.github.com"
-          git add _imported_metatube
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
+          git checkout -B arena/c5bfd128-snaptube
+          git add -A _imported_metatube > /tmp/git.log 2>&1
+          RC1=$?
+          git status --short | head -n 50 >> /tmp/git.log 2>&1
+          git commit -m "chore: import metatube.zip source for audit and APK build [skip ci]" >> /tmp/git.log 2>&1
+          RC2=$?
+          git push origin HEAD:refs/heads/arena/c5bfd128-snaptube >> /tmp/git.log 2>&1
+          RC3=$?
+          if [ $RC1 -ne 0 ] || [ $RC2 -ne 0 ] || [ $RC3 -ne 0 ]; then
+            MSG=$(tail -c 3500 /tmp/git.log | tr '\n' ' ')
+            echo "::error title=GitImportFailed::RC=$RC1,$RC2,$RC3 :: $MSG"
+            cat /tmp/git.log
+            exit 1
           fi
-          git commit -m "chore: import metatube.zip source for audit and APK build [skip ci]"
-          git push origin arena/c5bfd128-snaptube
