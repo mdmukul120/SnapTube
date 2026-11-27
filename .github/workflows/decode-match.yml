@@ -1,0 +1,64 @@
+name: Decode Playtek Links & Generate match.json
+
+on:
+  push:
+    branches:
+      - main
+      - 'arena/**'
+    paths:
+      - 'txt_decoder.py'
+      - 'generate_match.py'
+      - 'requirements.txt'
+      - '.github/workflows/decode-match.yml'
+  schedule:
+    # প্রতি ৫ মিনিট পরপর অটোমেটিক ডিকোড করে match.json আপডেট করবে
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: decode-match-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  decode-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Decode Playtek Links & Generate match.json
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_REF_NAME: ${{ github.ref_name }}
+        run: |
+          python generate_match.py -o match.json --config-output config_decoded.json
+
+      - name: Commit and Push match.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add match.json config_decoded.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: auto-update decoded match.json [skip ci]"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
